@@ -338,7 +338,7 @@
               <MiscControls>--cpp11</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\USER\Motor;..\USER\Chassis;..\USER\PID;..\USER\Steer</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\USER\Chassis;..\USER\Motor;..\USER\PID;..\USER\Steer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,14 +418,14 @@
               <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
             <File>
-              <FileName>motor.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\USER\Motor\motor.cpp</FilePath>
-            </File>
-            <File>
               <FileName>chassis.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\USER\Chassis\chassis.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>motor.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\USER\Motor\motor.cpp</FilePath>
             </File>
             <File>
               <FileName>PID.cpp</FileName>

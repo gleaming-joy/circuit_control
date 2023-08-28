@@ -126,6 +126,21 @@ Section Cross References
     stm32f4xx_it.o(.ARM.exidx) refers to stm32f4xx_it.o(i.PendSV_Handler) for i.PendSV_Handler
     stm32f4xx_it.o(.ARM.exidx) refers to stm32f4xx_it.o(i.SysTick_Handler) for i.SysTick_Handler
     stm32f4xx_hal_msp.o(.ARM.exidx) refers to stm32f4xx_hal_msp.o(i.HAL_MspInit) for i.HAL_MspInit
+    chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method) for Class_Motor_With_Hall_Encoder::Set_Control_Method(Enum_Control_Method)
+    chassis.o(i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder31Hall_Encoder_GPIO_EXTI_CallbackEv) for Class_Motor_With_Hall_Encoder::Hall_Encoder_GPIO_EXTI_Callback()
+    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_) for void Math_Constrain<float>(T1*, T1, T1)
+    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to motor.o(i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv) for Class_Motor::Get_Rotate_Direction_Flag()
+    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf) for Class_Motor_With_Hall_Encoder::Set_Omega_Target(float)
+    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv) for Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback()
+    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_) for Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef, unsigned char, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*, TIM_HandleTypeDef, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*)
+    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to motor.o(i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction) for Class_Motor::Set_Rotate_Direction_Flag(Enum_Rotate_Direction)
+    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to pid.o(i._ZN9Class_PID4InitEfffff) for Class_PID::Init(float, float, float, float, float)
+    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) for i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_
+    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef) for i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef
+    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method) for i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method
+    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt) for i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt
+    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) for i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv
     motor.o(i._ZN11Class_Motor4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
     motor.o(i._ZN11Class_Motor4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_) refers to stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start) for HAL_TIM_PWM_Start
     motor.o(i._ZN11Class_Motor6OutputEv) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
@@ -159,21 +174,6 @@ Section Cross References
     motor.o(.ARM.exidx) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder13Get_Angle_NowEv) for i._ZN29Class_Motor_With_Hall_Encoder13Get_Angle_NowEv
     motor.o(.ARM.exidx) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder31Hall_Encoder_GPIO_EXTI_CallbackEv) for i._ZN29Class_Motor_With_Hall_Encoder31Hall_Encoder_GPIO_EXTI_CallbackEv
     motor.o(.ARM.exidx) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv) for i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv
-    chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method) for Class_Motor_With_Hall_Encoder::Set_Control_Method(Enum_Control_Method)
-    chassis.o(i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder31Hall_Encoder_GPIO_EXTI_CallbackEv) for Class_Motor_With_Hall_Encoder::Hall_Encoder_GPIO_EXTI_Callback()
-    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_) for void Math_Constrain<float>(T1*, T1, T1)
-    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to motor.o(i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv) for Class_Motor::Get_Rotate_Direction_Flag()
-    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf) for Class_Motor_With_Hall_Encoder::Set_Omega_Target(float)
-    chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv) for Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback()
-    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
-    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to motor.o(i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_) for Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef, unsigned char, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*, TIM_HandleTypeDef, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*)
-    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to motor.o(i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction) for Class_Motor::Set_Rotate_Direction_Flag(Enum_Rotate_Direction)
-    chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) refers to pid.o(i._ZN9Class_PID4InitEfffff) for Class_PID::Init(float, float, float, float, float)
-    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_) for i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_
-    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef) for i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef
-    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method) for i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method
-    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt) for i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt
-    chassis.o(.ARM.exidx) refers to chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv) for i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv
     pid.o(i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv) refers to pid.o(t._Z8Math_AbsIfET_S0_) for T1 Math_Abs<float>(T1)
     pid.o(i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv) refers to chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_) for void Math_Constrain<float>(T1*, T1, T1)
     pid.o(.ARM.exidx) refers to pid.o(i._ZN9Class_PID4InitEfffff) for i._ZN9Class_PID4InitEfffff
@@ -1046,9 +1046,9 @@ Section Cross References
     main.o(.ARM.exidx) refers to main.o(i._ZN9Class_PIDC1Ev) for i._ZN9Class_PIDC1Ev
     main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev) refers to main.o(i._ZN9Class_PIDC1Ev) for Class_PID::Class_PID()
     main.o(.ARM.exidx) refers to main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev) for i._ZN29Class_Motor_With_Hall_EncoderC1Ev
+    chassis.o(.ARM.exidx) refers to chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_) for t._Z14Math_ConstrainIfEvPT_S0_S0_
     motor.o(.ARM.exidx) refers to motor.o(t._Z8Math_AbsIiET_S0_) for t._Z8Math_AbsIiET_S0_
     motor.o(.ARM.exidx) refers to motor.o(t._Z14Math_ConstrainIiEvPT_S0_S0_) for t._Z14Math_ConstrainIiEvPT_S0_S0_
-    chassis.o(.ARM.exidx) refers to chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_) for t._Z14Math_ConstrainIfEvPT_S0_S0_
     pid.o(.ARM.exidx) refers to pid.o(t._Z8Math_AbsIfET_S0_) for t._Z8Math_AbsIfET_S0_
 
 
@@ -1095,6 +1095,15 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_hal_msp.o(.revsh_text), (4 bytes).
     Removing stm32f4xx_hal_msp.o(.rrx_text), (6 bytes).
     Removing stm32f4xx_hal_msp.o(.ARM.exidx), (8 bytes).
+    Removing chassis.o(.rev16_text), (4 bytes).
+    Removing chassis.o(.revsh_text), (4 bytes).
+    Removing chassis.o(.rrx_text), (6 bytes).
+    Removing chassis.o(i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt), (60 bytes).
+    Removing chassis.o(.ARM.exidx), (8 bytes).
+    Removing chassis.o(.ARM.exidx), (8 bytes).
+    Removing chassis.o(.ARM.exidx), (8 bytes).
+    Removing chassis.o(.ARM.exidx), (8 bytes).
+    Removing chassis.o(.ARM.exidx), (8 bytes).
     Removing motor.o(.rev16_text), (4 bytes).
     Removing motor.o(.revsh_text), (4 bytes).
     Removing motor.o(.rrx_text), (6 bytes).
@@ -1131,15 +1140,6 @@ Removing Unused input sections from the image.
     Removing motor.o(.ARM.exidx), (8 bytes).
     Removing motor.o(.ARM.exidx), (8 bytes).
     Removing motor.o(.ARM.exidx), (8 bytes).
-    Removing chassis.o(.rev16_text), (4 bytes).
-    Removing chassis.o(.revsh_text), (4 bytes).
-    Removing chassis.o(.rrx_text), (6 bytes).
-    Removing chassis.o(i._ZN13Class_Chassis31Hall_Encoder_GPIO_EXTI_CallbackEt), (60 bytes).
-    Removing chassis.o(.ARM.exidx), (8 bytes).
-    Removing chassis.o(.ARM.exidx), (8 bytes).
-    Removing chassis.o(.ARM.exidx), (8 bytes).
-    Removing chassis.o(.ARM.exidx), (8 bytes).
-    Removing chassis.o(.ARM.exidx), (8 bytes).
     Removing pid.o(.rev16_text), (4 bytes).
     Removing pid.o(.revsh_text), (4 bytes).
     Removing pid.o(.rrx_text), (6 bytes).
@@ -1833,9 +1833,9 @@ Removing Unused input sections from the image.
     Removing system_stm32f4xx.o(.ARM.exidx), (8 bytes).
     Removing main.o(.ARM.exidx), (8 bytes).
     Removing main.o(.ARM.exidx), (8 bytes).
-    Removing motor.o(.ARM.exidx), (8 bytes).
-    Removing motor.o(.ARM.exidx), (8 bytes).
     Removing chassis.o(.ARM.exidx), (8 bytes).
+    Removing motor.o(.ARM.exidx), (8 bytes).
+    Removing motor.o(.ARM.exidx), (8 bytes).
     Removing pid.o(.ARM.exidx), (8 bytes).
 
 781 unused section(s) (total 37572 bytes) removed from the image.
@@ -1848,8 +1848,8 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../../../clib/unwind_pr.c                0x00000000   Number         0  unwind_pr0.o ABSOLUTE
     ../../../clib/unwind_pr.c                0x00000000   Number         0  unwind_prcommon.o ABSOLUTE
+    ../../../clib/unwind_pr.c                0x00000000   Number         0  unwind_pr0.o ABSOLUTE
     ../../../clib/unwinder.c                 0x00000000   Number         0  unwinder.o ABSOLUTE
     ../../../clib/unwinder.c                 0x00000000   Number         0  unwinder.o ABSOLUTE
     ../../../clib/unwinder.c                 0x00000000   Number         0  unwind_activity.o ABSOLUTE
@@ -1876,95 +1876,95 @@ Image Symbol Table
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f4xx_hal_rcc_ex.o ABSOLUTE
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c 0x00000000   Number         0  stm32f4xx_hal_tim.o ABSOLUTE
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c 0x00000000   Number         0  stm32f4xx_hal_tim_ex.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor_intlibspace.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  mutex_dummy.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/arm_runtime.c                    0x00000000   Number         0  init_aeabi.o ABSOLUTE
     ../clib/arm_runtime.c                    0x00000000   Number         0  init_aeabi.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_init_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_free_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_extend_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_init.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_final.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_final_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_init.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend_mt.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc_mt.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free_mt.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_init_mt.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  fdtree.o ABSOLUTE
-    ../clib/heap2.c                          0x00000000   Number         0  heap2mt.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  heap2.o ABSOLUTE
+    ../clib/heap2.c                          0x00000000   Number         0  heap2mt.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hguard.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  heapstubs.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  free.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  malloc.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  term_alloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  init_alloc.o ABSOLUTE
-    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxa.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  abort.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  bsearchnoex.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
-    ../clib/stdlib.c                         0x00000000   Number         0  abort.o ABSOLUTE
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
     ..\Core\Src\gpio.c                       0x00000000   Number         0  gpio.o ABSOLUTE
     ..\Core\Src\main.c                       0x00000000   Number         0  main.o ABSOLUTE
@@ -2092,72 +2092,72 @@ Image Symbol Table
     i.HAL_TIM_PWM_Start                      0x0800181c   Section        0  stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start)
     i.HardFault_Handler                      0x08001928   Section        0  stm32f4xx_it.o(i.HardFault_Handler)
     i.MX_GPIO_Init                           0x0800192c   Section        0  gpio.o(i.MX_GPIO_Init)
-    i.MX_TIM1_Init                           0x08001af8   Section        0  tim.o(i.MX_TIM1_Init)
-    i.MX_TIM2_Init                           0x08001be0   Section        0  tim.o(i.MX_TIM2_Init)
-    i.MX_TIM3_Init                           0x08001c90   Section        0  tim.o(i.MX_TIM3_Init)
-    i.MX_TIM4_Init                           0x08001d64   Section        0  tim.o(i.MX_TIM4_Init)
-    i.MX_TIM9_Init                           0x08001e38   Section        0  tim.o(i.MX_TIM9_Init)
-    i.MemManage_Handler                      0x08001ed4   Section        0  stm32f4xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x08001ed8   Section        0  stm32f4xx_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x08001edc   Section        0  stm32f4xx_it.o(i.PendSV_Handler)
-    i.SVC_Handler                            0x08001ede   Section        0  stm32f4xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x08001ee0   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
-    i.SystemInit                             0x08001ee8   Section        0  system_stm32f4xx.o(i.SystemInit)
-    i.TIM_Base_SetConfig                     0x08001efc   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    i.TIM_CCxChannelCmd                      0x08001fd4   Section        0  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
-    i.TIM_ETR_SetConfig                      0x08001ff6   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    i.TIM_OC2_SetConfig                      0x0800200c   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
-    i.UsageFault_Handler                     0x08002088   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
-    i._Z18SystemClock_Configv                0x0800208c   Section        0  main.o(i._Z18SystemClock_Configv)
-    i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv 0x08002140   Section        0  motor.o(i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv)
-    i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction 0x08002148   Section        0  motor.o(i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction)
-    i._ZN11Class_Motor6OutputEv              0x0800214e   Section        0  motor.o(i._ZN11Class_Motor6OutputEv)
-    i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef 0x080021f4   Section        0  chassis.o(i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef)
-    i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method 0x0800220a   Section        0  chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method)
-    i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv 0x08002234   Section        0  chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv)
-    i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_ 0x080023dc   Section        0  chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_)
-    i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf 0x080028f4   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf)
-    i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method 0x080028fa   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method)
-    i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv 0x08002900   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv)
-    i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_ 0x08002a40   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_)
-    i._ZN29Class_Motor_With_Hall_EncoderC1Ev 0x08002b40   Section        0  main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev)
-    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef 0x08002bbc   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
-    [local to stm32f4xx_hal_tim_c]::TIM_OC1_SetConfig(TIM_TypeDef*, TIM_OC_InitTypeDef*) 0x08002bbd   Thumb Code   104  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
-    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef 0x08002c2c   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
-    [local to stm32f4xx_hal_tim_c]::TIM_OC3_SetConfig(TIM_TypeDef*, TIM_OC_InitTypeDef*) 0x08002c2d   Thumb Code   112  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
-    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef 0x08002ca4   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
-    [local to stm32f4xx_hal_tim_c]::TIM_OC4_SetConfig(TIM_TypeDef*, TIM_OC_InitTypeDef*) 0x08002ca5   Thumb Code    74  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
-    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj 0x08002cf8   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj)
-    [local to stm32f4xx_hal_tim_c]::TIM_ITRx_SetConfig(TIM_TypeDef*, unsigned) 0x08002cf9   Thumb Code    18  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj)
-    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj 0x08002d0a   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj)
-    [local to stm32f4xx_hal_tim_c]::TIM_TI1_ConfigInputStage(TIM_TypeDef*, unsigned, unsigned) 0x08002d0b   Thumb Code    38  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj)
-    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj 0x08002d30   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj)
-    [local to stm32f4xx_hal_tim_c]::TIM_TI2_ConfigInputStage(TIM_TypeDef*, unsigned, unsigned) 0x08002d31   Thumb Code    40  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj)
-    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej 0x08002d58   Section        0  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej)
-    [local to stm32f4xx_hal_cortex_c]::__NVIC_SetPriority(IRQn_Type, unsigned) 0x08002d59   Thumb Code    32  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej)
-    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv 0x08002d80   Section        0  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv)
-    [local to stm32f4xx_hal_cortex_c]::__NVIC_GetPriorityGrouping() 0x08002d81   Thumb Code    10  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv)
-    i._ZN9Class_PID10Set_TargetEf            0x08002d90   Section        0  pid.o(i._ZN9Class_PID10Set_TargetEf)
-    i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv 0x08002d98   Section        0  pid.o(i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv)
-    i._ZN9Class_PID4InitEfffff               0x08002fb8   Section        0  pid.o(i._ZN9Class_PID4InitEfffff)
-    i._ZN9Class_PID7Get_OutEv                0x08002fce   Section        0  pid.o(i._ZN9Class_PID7Get_OutEv)
-    i._ZN9Class_PID7Set_NowEf                0x08002fd4   Section        0  pid.o(i._ZN9Class_PID7Set_NowEf)
-    i._ZN9Class_PIDC1Ev                      0x08002fdc   Section        0  main.o(i._ZN9Class_PIDC1Ev)
-    i.__aeabi_vec_ctor_nocookie_nodtor       0x0800304c   Section        0  aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor)
-    i.__sti___6_main_c_Chassis               0x08003070   Section        0  main.o(i.__sti___6_main_c_Chassis)
-    __sti___6_main_c_Chassis                 0x08003071   Thumb Code    40  main.o(i.__sti___6_main_c_Chassis)
-    i.main                                   0x080030a4   Section        0  main.o(i.main)
-    t._Z14Math_ConstrainIfEvPT_S0_S0_        0x08003304   Section        0  chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_)
-    t._Z14Math_ConstrainIiEvPT_S0_S0_        0x0800332c   Section        0  motor.o(t._Z14Math_ConstrainIiEvPT_S0_S0_)
-    t._Z8Math_AbsIfET_S0_                    0x08003340   Section        0  pid.o(t._Z8Math_AbsIfET_S0_)
-    t._Z8Math_AbsIiET_S0_                    0x0800335a   Section        0  motor.o(t._Z8Math_AbsIiET_S0_)
-    x$fpl$fpinit                             0x08003368   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x08003368   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x08003374   Section       84  main.o(.constdata)
-    <Data1>                                  0x080033bc   Data          12  main.o(.constdata)
-    .constdata                               0x080033c8   Section       24  system_stm32f4xx.o(.constdata)
-    .init_array                              0x08003400   Section        4  main.o(.init_array)
-    .init_array                              0x08003404   Section        0  init_aeabi.o(.init_array)
+    i.MX_TIM1_Init                           0x08001bc8   Section        0  tim.o(i.MX_TIM1_Init)
+    i.MX_TIM2_Init                           0x08001cb0   Section        0  tim.o(i.MX_TIM2_Init)
+    i.MX_TIM3_Init                           0x08001d60   Section        0  tim.o(i.MX_TIM3_Init)
+    i.MX_TIM4_Init                           0x08001e34   Section        0  tim.o(i.MX_TIM4_Init)
+    i.MX_TIM9_Init                           0x08001f08   Section        0  tim.o(i.MX_TIM9_Init)
+    i.MemManage_Handler                      0x08001fa4   Section        0  stm32f4xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08001fa8   Section        0  stm32f4xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x08001fac   Section        0  stm32f4xx_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x08001fae   Section        0  stm32f4xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08001fb0   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x08001fb8   Section        0  system_stm32f4xx.o(i.SystemInit)
+    i.TIM_Base_SetConfig                     0x08001fcc   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    i.TIM_CCxChannelCmd                      0x080020a4   Section        0  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
+    i.TIM_ETR_SetConfig                      0x080020c6   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    i.TIM_OC2_SetConfig                      0x080020dc   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
+    i.UsageFault_Handler                     0x08002158   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
+    i._Z18SystemClock_Configv                0x0800215c   Section        0  main.o(i._Z18SystemClock_Configv)
+    i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv 0x08002210   Section        0  motor.o(i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv)
+    i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction 0x08002218   Section        0  motor.o(i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction)
+    i._ZN11Class_Motor6OutputEv              0x0800221e   Section        0  motor.o(i._ZN11Class_Motor6OutputEv)
+    i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef 0x080022c4   Section        0  chassis.o(i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef)
+    i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method 0x080022da   Section        0  chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method)
+    i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv 0x08002304   Section        0  chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv)
+    i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_ 0x080024ac   Section        0  chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_)
+    i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf 0x080029c4   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf)
+    i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method 0x080029ca   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method)
+    i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv 0x080029d0   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv)
+    i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_ 0x08002b10   Section        0  motor.o(i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_)
+    i._ZN29Class_Motor_With_Hall_EncoderC1Ev 0x08002c10   Section        0  main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev)
+    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef 0x08002c8c   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
+    [local to stm32f4xx_hal_tim_c]::TIM_OC1_SetConfig(TIM_TypeDef*, TIM_OC_InitTypeDef*) 0x08002c8d   Thumb Code   104  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
+    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef 0x08002cfc   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
+    [local to stm32f4xx_hal_tim_c]::TIM_OC3_SetConfig(TIM_TypeDef*, TIM_OC_InitTypeDef*) 0x08002cfd   Thumb Code   112  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
+    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef 0x08002d74   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
+    [local to stm32f4xx_hal_tim_c]::TIM_OC4_SetConfig(TIM_TypeDef*, TIM_OC_InitTypeDef*) 0x08002d75   Thumb Code    74  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef)
+    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj 0x08002dc8   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj)
+    [local to stm32f4xx_hal_tim_c]::TIM_ITRx_SetConfig(TIM_TypeDef*, unsigned) 0x08002dc9   Thumb Code    18  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj)
+    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj 0x08002dda   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj)
+    [local to stm32f4xx_hal_tim_c]::TIM_TI1_ConfigInputStage(TIM_TypeDef*, unsigned, unsigned) 0x08002ddb   Thumb Code    38  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj)
+    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj 0x08002e00   Section        0  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj)
+    [local to stm32f4xx_hal_tim_c]::TIM_TI2_ConfigInputStage(TIM_TypeDef*, unsigned, unsigned) 0x08002e01   Thumb Code    40  stm32f4xx_hal_tim.o(i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj)
+    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej 0x08002e28   Section        0  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej)
+    [local to stm32f4xx_hal_cortex_c]::__NVIC_SetPriority(IRQn_Type, unsigned) 0x08002e29   Thumb Code    32  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej)
+    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv 0x08002e50   Section        0  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv)
+    [local to stm32f4xx_hal_cortex_c]::__NVIC_GetPriorityGrouping() 0x08002e51   Thumb Code    10  stm32f4xx_hal_cortex.o(i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv)
+    i._ZN9Class_PID10Set_TargetEf            0x08002e60   Section        0  pid.o(i._ZN9Class_PID10Set_TargetEf)
+    i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv 0x08002e68   Section        0  pid.o(i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv)
+    i._ZN9Class_PID4InitEfffff               0x08003088   Section        0  pid.o(i._ZN9Class_PID4InitEfffff)
+    i._ZN9Class_PID7Get_OutEv                0x0800309e   Section        0  pid.o(i._ZN9Class_PID7Get_OutEv)
+    i._ZN9Class_PID7Set_NowEf                0x080030a4   Section        0  pid.o(i._ZN9Class_PID7Set_NowEf)
+    i._ZN9Class_PIDC1Ev                      0x080030ac   Section        0  main.o(i._ZN9Class_PIDC1Ev)
+    i.__aeabi_vec_ctor_nocookie_nodtor       0x0800311c   Section        0  aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor)
+    i.__sti___6_main_c_Chassis               0x08003140   Section        0  main.o(i.__sti___6_main_c_Chassis)
+    __sti___6_main_c_Chassis                 0x08003141   Thumb Code    40  main.o(i.__sti___6_main_c_Chassis)
+    i.main                                   0x08003174   Section        0  main.o(i.main)
+    t._Z14Math_ConstrainIfEvPT_S0_S0_        0x08003494   Section        0  chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_)
+    t._Z14Math_ConstrainIiEvPT_S0_S0_        0x080034bc   Section        0  motor.o(t._Z14Math_ConstrainIiEvPT_S0_S0_)
+    t._Z8Math_AbsIfET_S0_                    0x080034d0   Section        0  pid.o(t._Z8Math_AbsIfET_S0_)
+    t._Z8Math_AbsIiET_S0_                    0x080034ea   Section        0  motor.o(t._Z8Math_AbsIiET_S0_)
+    x$fpl$fpinit                             0x080034f8   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x080034f8   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x08003504   Section       84  main.o(.constdata)
+    <Data1>                                  0x0800354c   Data          12  main.o(.constdata)
+    .constdata                               0x08003558   Section       24  system_stm32f4xx.o(.constdata)
+    .init_array                              0x08003590   Section        4  main.o(.init_array)
+    .init_array                              0x08003594   Section        0  init_aeabi.o(.init_array)
     .data                                    0x20000000   Section        9  stm32f4xx_hal.o(.data)
     .data                                    0x2000000c   Section        4  system_stm32f4xx.o(.data)
     .bss                                     0x20000010   Section     1728  main.o(.bss)
@@ -2401,59 +2401,59 @@ Image Symbol Table
     HAL_TIM_PWM_MspInit                      0x0800181b   Thumb Code     2  stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_MspInit)
     HAL_TIM_PWM_Start                        0x0800181d   Thumb Code   238  stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start)
     HardFault_Handler                        0x08001929   Thumb Code     4  stm32f4xx_it.o(i.HardFault_Handler)
-    MX_GPIO_Init                             0x0800192d   Thumb Code   432  gpio.o(i.MX_GPIO_Init)
-    MX_TIM1_Init                             0x08001af9   Thumb Code   222  tim.o(i.MX_TIM1_Init)
-    MX_TIM2_Init                             0x08001be1   Thumb Code   172  tim.o(i.MX_TIM2_Init)
-    MX_TIM3_Init                             0x08001c91   Thumb Code   204  tim.o(i.MX_TIM3_Init)
-    MX_TIM4_Init                             0x08001d65   Thumb Code   202  tim.o(i.MX_TIM4_Init)
-    MX_TIM9_Init                             0x08001e39   Thumb Code   148  tim.o(i.MX_TIM9_Init)
-    MemManage_Handler                        0x08001ed5   Thumb Code     4  stm32f4xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x08001ed9   Thumb Code     4  stm32f4xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x08001edd   Thumb Code     2  stm32f4xx_it.o(i.PendSV_Handler)
-    SVC_Handler                              0x08001edf   Thumb Code     2  stm32f4xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x08001ee1   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
-    SystemInit                               0x08001ee9   Thumb Code    14  system_stm32f4xx.o(i.SystemInit)
-    TIM_Base_SetConfig                       0x08001efd   Thumb Code   170  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    TIM_CCxChannelCmd                        0x08001fd5   Thumb Code    34  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
-    TIM_ETR_SetConfig                        0x08001ff7   Thumb Code    22  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    TIM_OC2_SetConfig                        0x0800200d   Thumb Code   114  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
-    UsageFault_Handler                       0x08002089   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
-    SystemClock_Config()                     0x0800208d   Thumb Code   170  main.o(i._Z18SystemClock_Configv)
-    Class_Motor::Get_Rotate_Direction_Flag() 0x08002141   Thumb Code     8  motor.o(i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv)
-    Class_Motor::Set_Rotate_Direction_Flag(Enum_Rotate_Direction) 0x08002149   Thumb Code     6  motor.o(i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction)
-    Class_Motor::Output()                    0x0800214f   Thumb Code   166  motor.o(i._ZN11Class_Motor6OutputEv)
-    Class_Chassis::Set_Velocity(SpeedTypeDef) 0x080021f5   Thumb Code    22  chassis.o(i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef)
-    Class_Chassis::Set_Control_Method(Enum_Control_Method) 0x0800220b   Thumb Code    40  chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method)
-    Class_Chassis::Calculate_TIM_PeriodElapsedCallback() 0x08002235   Thumb Code   412  chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv)
-    Class_Chassis::Init(TIM_HandleTypeDef, TIM_HandleTypeDef) 0x080023dd   Thumb Code  1272  chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_)
-    Class_Motor_With_Hall_Encoder::Set_Omega_Target(float) 0x080028f5   Thumb Code     6  motor.o(i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf)
-    Class_Motor_With_Hall_Encoder::Set_Control_Method(Enum_Control_Method) 0x080028fb   Thumb Code     6  motor.o(i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method)
-    Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback() 0x08002901   Thumb Code   316  motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv)
-    Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef, unsigned char, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*, TIM_HandleTypeDef, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*) 0x08002a41   Thumb Code   254  motor.o(i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_)
-    Class_Motor_With_Hall_Encoder::Class_Motor_With_Hall_Encoder() 0x08002b41   Thumb Code   110  main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev)
-    Class_Motor_With_Hall_Encoder::Class_Motor_With_Hall_Encoder__sub_object() 0x08002b41   Thumb Code     0  main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev)
-    Class_PID::Set_Target(float)             0x08002d91   Thumb Code     6  pid.o(i._ZN9Class_PID10Set_TargetEf)
-    Class_PID::Adjust_TIM_PeriodElapsedCallback() 0x08002d99   Thumb Code   540  pid.o(i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv)
-    Class_PID::Init(float, float, float, float, float) 0x08002fb9   Thumb Code    22  pid.o(i._ZN9Class_PID4InitEfffff)
-    Class_PID::Get_Out()                     0x08002fcf   Thumb Code     6  pid.o(i._ZN9Class_PID7Get_OutEv)
-    Class_PID::Set_Now(float)                0x08002fd5   Thumb Code     6  pid.o(i._ZN9Class_PID7Set_NowEf)
-    Class_PID::Class_PID()                   0x08002fdd   Thumb Code   104  main.o(i._ZN9Class_PIDC1Ev)
-    Class_PID::Class_PID__sub_object()       0x08002fdd   Thumb Code     0  main.o(i._ZN9Class_PIDC1Ev)
-    __aeabi_vec_ctor_nocookie_nodtor         0x0800304d   Thumb Code    36  aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor)
-    main                                     0x080030a5   Thumb Code   592  main.o(i.main)
-    void Math_Constrain<float>(T1*, T1, T1)  0x08003305   Thumb Code    40  chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_)
-    void Math_Constrain<int>(T1*, T1, T1)    0x0800332d   Thumb Code    20  motor.o(t._Z14Math_ConstrainIiEvPT_S0_S0_)
-    T1 Math_Abs<float>(T1)                   0x08003341   Thumb Code    26  pid.o(t._Z8Math_AbsIfET_S0_)
-    T1 Math_Abs<int>(T1)                     0x0800335b   Thumb Code    14  motor.o(t._Z8Math_AbsIiET_S0_)
-    _fp_init                                 0x08003369   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08003371   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08003371   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    AHBPrescTable                            0x080033c8   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x080033d8   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x080033e0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003400   Number         0  anon$$obj.o(Region$$Table)
-    SHT$$INIT_ARRAY$$Base                    0x08003400   Number         0  main.o(.init_array)
-    SHT$$INIT_ARRAY$$Limit                   0x08003404   Number         0  init_aeabi.o(.init_array)
+    MX_GPIO_Init                             0x0800192d   Thumb Code   640  gpio.o(i.MX_GPIO_Init)
+    MX_TIM1_Init                             0x08001bc9   Thumb Code   222  tim.o(i.MX_TIM1_Init)
+    MX_TIM2_Init                             0x08001cb1   Thumb Code   172  tim.o(i.MX_TIM2_Init)
+    MX_TIM3_Init                             0x08001d61   Thumb Code   204  tim.o(i.MX_TIM3_Init)
+    MX_TIM4_Init                             0x08001e35   Thumb Code   202  tim.o(i.MX_TIM4_Init)
+    MX_TIM9_Init                             0x08001f09   Thumb Code   148  tim.o(i.MX_TIM9_Init)
+    MemManage_Handler                        0x08001fa5   Thumb Code     4  stm32f4xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08001fa9   Thumb Code     4  stm32f4xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x08001fad   Thumb Code     2  stm32f4xx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x08001faf   Thumb Code     2  stm32f4xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08001fb1   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
+    SystemInit                               0x08001fb9   Thumb Code    14  system_stm32f4xx.o(i.SystemInit)
+    TIM_Base_SetConfig                       0x08001fcd   Thumb Code   170  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    TIM_CCxChannelCmd                        0x080020a5   Thumb Code    34  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
+    TIM_ETR_SetConfig                        0x080020c7   Thumb Code    22  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    TIM_OC2_SetConfig                        0x080020dd   Thumb Code   114  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
+    UsageFault_Handler                       0x08002159   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
+    SystemClock_Config()                     0x0800215d   Thumb Code   170  main.o(i._Z18SystemClock_Configv)
+    Class_Motor::Get_Rotate_Direction_Flag() 0x08002211   Thumb Code     8  motor.o(i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv)
+    Class_Motor::Set_Rotate_Direction_Flag(Enum_Rotate_Direction) 0x08002219   Thumb Code     6  motor.o(i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction)
+    Class_Motor::Output()                    0x0800221f   Thumb Code   166  motor.o(i._ZN11Class_Motor6OutputEv)
+    Class_Chassis::Set_Velocity(SpeedTypeDef) 0x080022c5   Thumb Code    22  chassis.o(i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef)
+    Class_Chassis::Set_Control_Method(Enum_Control_Method) 0x080022db   Thumb Code    40  chassis.o(i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method)
+    Class_Chassis::Calculate_TIM_PeriodElapsedCallback() 0x08002305   Thumb Code   412  chassis.o(i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv)
+    Class_Chassis::Init(TIM_HandleTypeDef, TIM_HandleTypeDef) 0x080024ad   Thumb Code  1272  chassis.o(i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_)
+    Class_Motor_With_Hall_Encoder::Set_Omega_Target(float) 0x080029c5   Thumb Code     6  motor.o(i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf)
+    Class_Motor_With_Hall_Encoder::Set_Control_Method(Enum_Control_Method) 0x080029cb   Thumb Code     6  motor.o(i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method)
+    Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback() 0x080029d1   Thumb Code   316  motor.o(i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv)
+    Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef, unsigned char, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*, TIM_HandleTypeDef, unsigned short, GPIO_TypeDef*, unsigned short, GPIO_TypeDef*) 0x08002b11   Thumb Code   254  motor.o(i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_)
+    Class_Motor_With_Hall_Encoder::Class_Motor_With_Hall_Encoder() 0x08002c11   Thumb Code   110  main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev)
+    Class_Motor_With_Hall_Encoder::Class_Motor_With_Hall_Encoder__sub_object() 0x08002c11   Thumb Code     0  main.o(i._ZN29Class_Motor_With_Hall_EncoderC1Ev)
+    Class_PID::Set_Target(float)             0x08002e61   Thumb Code     6  pid.o(i._ZN9Class_PID10Set_TargetEf)
+    Class_PID::Adjust_TIM_PeriodElapsedCallback() 0x08002e69   Thumb Code   540  pid.o(i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv)
+    Class_PID::Init(float, float, float, float, float) 0x08003089   Thumb Code    22  pid.o(i._ZN9Class_PID4InitEfffff)
+    Class_PID::Get_Out()                     0x0800309f   Thumb Code     6  pid.o(i._ZN9Class_PID7Get_OutEv)
+    Class_PID::Set_Now(float)                0x080030a5   Thumb Code     6  pid.o(i._ZN9Class_PID7Set_NowEf)
+    Class_PID::Class_PID()                   0x080030ad   Thumb Code   104  main.o(i._ZN9Class_PIDC1Ev)
+    Class_PID::Class_PID__sub_object()       0x080030ad   Thumb Code     0  main.o(i._ZN9Class_PIDC1Ev)
+    __aeabi_vec_ctor_nocookie_nodtor         0x0800311d   Thumb Code    36  aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor)
+    main                                     0x08003175   Thumb Code   784  main.o(i.main)
+    void Math_Constrain<float>(T1*, T1, T1)  0x08003495   Thumb Code    40  chassis.o(t._Z14Math_ConstrainIfEvPT_S0_S0_)
+    void Math_Constrain<int>(T1*, T1, T1)    0x080034bd   Thumb Code    20  motor.o(t._Z14Math_ConstrainIiEvPT_S0_S0_)
+    T1 Math_Abs<float>(T1)                   0x080034d1   Thumb Code    26  pid.o(t._Z8Math_AbsIfET_S0_)
+    T1 Math_Abs<int>(T1)                     0x080034eb   Thumb Code    14  motor.o(t._Z8Math_AbsIiET_S0_)
+    _fp_init                                 0x080034f9   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08003501   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08003501   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    AHBPrescTable                            0x08003558   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08003568   Data           8  system_stm32f4xx.o(.constdata)
+    Region$$Table$$Base                      0x08003570   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003590   Number         0  anon$$obj.o(Region$$Table)
+    SHT$$INIT_ARRAY$$Base                    0x08003590   Number         0  main.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x08003594   Number         0  init_aeabi.o(.init_array)
     uwTick                                   0x20000000   Data           4  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTickFreq                               0x20000008   Data           1  stm32f4xx_hal.o(.data)
@@ -2475,9 +2475,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003414, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000035a4, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003404, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003594, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2579,77 +2579,77 @@ Memory Map of the image
     0x0800181a   0x0800181a   0x00000002   Code   RO          901    i.HAL_TIM_PWM_MspInit  stm32f4xx_hal_tim.o
     0x0800181c   0x0800181c   0x0000010c   Code   RO          904    i.HAL_TIM_PWM_Start  stm32f4xx_hal_tim.o
     0x08001928   0x08001928   0x00000004   Code   RO          351    i.HardFault_Handler  stm32f4xx_it.o
-    0x0800192c   0x0800192c   0x000001cc   Code   RO          180    i.MX_GPIO_Init      gpio.o
-    0x08001af8   0x08001af8   0x000000e8   Code   RO          269    i.MX_TIM1_Init      tim.o
-    0x08001be0   0x08001be0   0x000000b0   Code   RO          270    i.MX_TIM2_Init      tim.o
-    0x08001c90   0x08001c90   0x000000d4   Code   RO          271    i.MX_TIM3_Init      tim.o
-    0x08001d64   0x08001d64   0x000000d4   Code   RO          272    i.MX_TIM4_Init      tim.o
-    0x08001e38   0x08001e38   0x0000009c   Code   RO          273    i.MX_TIM9_Init      tim.o
-    0x08001ed4   0x08001ed4   0x00000004   Code   RO          352    i.MemManage_Handler  stm32f4xx_it.o
-    0x08001ed8   0x08001ed8   0x00000004   Code   RO          353    i.NMI_Handler       stm32f4xx_it.o
-    0x08001edc   0x08001edc   0x00000002   Code   RO          354    i.PendSV_Handler    stm32f4xx_it.o
-    0x08001ede   0x08001ede   0x00000002   Code   RO          355    i.SVC_Handler       stm32f4xx_it.o
-    0x08001ee0   0x08001ee0   0x00000008   Code   RO          356    i.SysTick_Handler   stm32f4xx_it.o
-    0x08001ee8   0x08001ee8   0x00000014   Code   RO         3309    i.SystemInit        system_stm32f4xx.o
-    0x08001efc   0x08001efc   0x000000d8   Code   RO          917    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
-    0x08001fd4   0x08001fd4   0x00000022   Code   RO          918    i.TIM_CCxChannelCmd  stm32f4xx_hal_tim.o
-    0x08001ff6   0x08001ff6   0x00000016   Code   RO          923    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
-    0x0800200c   0x0800200c   0x0000007c   Code   RO          924    i.TIM_OC2_SetConfig  stm32f4xx_hal_tim.o
-    0x08002088   0x08002088   0x00000004   Code   RO          357    i.UsageFault_Handler  stm32f4xx_it.o
-    0x0800208c   0x0800208c   0x000000b4   Code   RO           14    i._Z18SystemClock_Configv  main.o
-    0x08002140   0x08002140   0x00000008   Code   RO          462    i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv  motor.o
-    0x08002148   0x08002148   0x00000006   Code   RO          463    i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction  motor.o
-    0x0800214e   0x0800214e   0x000000a6   Code   RO          465    i._ZN11Class_Motor6OutputEv  motor.o
-    0x080021f4   0x080021f4   0x00000016   Code   RO          610    i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef  chassis.o
-    0x0800220a   0x0800220a   0x00000028   Code   RO          611    i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method  chassis.o
-    0x08002232   0x08002232   0x00000002   PAD
-    0x08002234   0x08002234   0x000001a8   Code   RO          613    i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv  chassis.o
-    0x080023dc   0x080023dc   0x00000518   Code   RO          614    i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_  chassis.o
-    0x080028f4   0x080028f4   0x00000006   Code   RO          471    i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf  motor.o
-    0x080028fa   0x080028fa   0x00000006   Code   RO          473    i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method  motor.o
-    0x08002900   0x08002900   0x00000140   Code   RO          476    i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv  motor.o
-    0x08002a40   0x08002a40   0x000000fe   Code   RO          477    i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_  motor.o
-    0x08002b3e   0x08002b3e   0x00000002   PAD
-    0x08002b40   0x08002b40   0x0000007c   Code   RO           57    i._ZN29Class_Motor_With_Hall_EncoderC1Ev  main.o
-    0x08002bbc   0x08002bbc   0x00000070   Code   RO          926    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef  stm32f4xx_hal_tim.o
-    0x08002c2c   0x08002c2c   0x00000078   Code   RO          927    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef  stm32f4xx_hal_tim.o
-    0x08002ca4   0x08002ca4   0x00000054   Code   RO          928    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef  stm32f4xx_hal_tim.o
-    0x08002cf8   0x08002cf8   0x00000012   Code   RO          933    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj  stm32f4xx_hal_tim.o
-    0x08002d0a   0x08002d0a   0x00000026   Code   RO          938    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj  stm32f4xx_hal_tim.o
-    0x08002d30   0x08002d30   0x00000028   Code   RO          939    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj  stm32f4xx_hal_tim.o
-    0x08002d58   0x08002d58   0x00000028   Code   RO         2872    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej  stm32f4xx_hal_cortex.o
-    0x08002d80   0x08002d80   0x00000010   Code   RO         2873    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv  stm32f4xx_hal_cortex.o
-    0x08002d90   0x08002d90   0x00000006   Code   RO          668    i._ZN9Class_PID10Set_TargetEf  pid.o
-    0x08002d96   0x08002d96   0x00000002   PAD
-    0x08002d98   0x08002d98   0x00000220   Code   RO          676    i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv  pid.o
-    0x08002fb8   0x08002fb8   0x00000016   Code   RO          677    i._ZN9Class_PID4InitEfffff  pid.o
-    0x08002fce   0x08002fce   0x00000006   Code   RO          678    i._ZN9Class_PID7Get_OutEv  pid.o
-    0x08002fd4   0x08002fd4   0x00000006   Code   RO          682    i._ZN9Class_PID7Set_NowEf  pid.o
-    0x08002fda   0x08002fda   0x00000002   PAD
-    0x08002fdc   0x08002fdc   0x00000070   Code   RO           54    i._ZN9Class_PIDC1Ev  main.o
-    0x0800304c   0x0800304c   0x00000024   Code   RO         3362    i.__aeabi_vec_ctor_nocookie_nodtor  cpprt_w.l(aeabi_vec_ctor_nocookie_nodtor.o)
-    0x08003070   0x08003070   0x00000034   Code   RO           15    i.__sti___6_main_c_Chassis  main.o
-    0x080030a4   0x080030a4   0x00000260   Code   RO           16    i.main              main.o
-    0x08003304   0x08003304   0x00000028   Code   RO          652    t._Z14Math_ConstrainIfEvPT_S0_S0_  chassis.o
-    0x0800332c   0x0800332c   0x00000014   Code   RO          597    t._Z14Math_ConstrainIiEvPT_S0_S0_  motor.o
-    0x08003340   0x08003340   0x0000001a   Code   RO          770    t._Z8Math_AbsIfET_S0_  pid.o
-    0x0800335a   0x0800335a   0x0000000e   Code   RO          590    t._Z8Math_AbsIiET_S0_  motor.o
-    0x08003368   0x08003368   0x0000000a   Code   RO         3440    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08003372   0x08003372   0x00000002   PAD
-    0x08003374   0x08003374   0x00000054   Data   RO           22    .constdata          main.o
-    0x080033c8   0x080033c8   0x00000018   Data   RO         3312    .constdata          system_stm32f4xx.o
-    0x080033e0   0x080033e0   0x00000020   Data   RO         3655    Region$$Table       anon$$obj.o
-    0x08003400   0x08003400   0x00000004   Data   RO           23    .init_array         main.o
-    0x08003404   0x08003400   0x00000000   Data   RO         3357    .init_array         c_w.l(init_aeabi.o)
+    0x0800192c   0x0800192c   0x0000029c   Code   RO          180    i.MX_GPIO_Init      gpio.o
+    0x08001bc8   0x08001bc8   0x000000e8   Code   RO          269    i.MX_TIM1_Init      tim.o
+    0x08001cb0   0x08001cb0   0x000000b0   Code   RO          270    i.MX_TIM2_Init      tim.o
+    0x08001d60   0x08001d60   0x000000d4   Code   RO          271    i.MX_TIM3_Init      tim.o
+    0x08001e34   0x08001e34   0x000000d4   Code   RO          272    i.MX_TIM4_Init      tim.o
+    0x08001f08   0x08001f08   0x0000009c   Code   RO          273    i.MX_TIM9_Init      tim.o
+    0x08001fa4   0x08001fa4   0x00000004   Code   RO          352    i.MemManage_Handler  stm32f4xx_it.o
+    0x08001fa8   0x08001fa8   0x00000004   Code   RO          353    i.NMI_Handler       stm32f4xx_it.o
+    0x08001fac   0x08001fac   0x00000002   Code   RO          354    i.PendSV_Handler    stm32f4xx_it.o
+    0x08001fae   0x08001fae   0x00000002   Code   RO          355    i.SVC_Handler       stm32f4xx_it.o
+    0x08001fb0   0x08001fb0   0x00000008   Code   RO          356    i.SysTick_Handler   stm32f4xx_it.o
+    0x08001fb8   0x08001fb8   0x00000014   Code   RO         3309    i.SystemInit        system_stm32f4xx.o
+    0x08001fcc   0x08001fcc   0x000000d8   Code   RO          917    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
+    0x080020a4   0x080020a4   0x00000022   Code   RO          918    i.TIM_CCxChannelCmd  stm32f4xx_hal_tim.o
+    0x080020c6   0x080020c6   0x00000016   Code   RO          923    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
+    0x080020dc   0x080020dc   0x0000007c   Code   RO          924    i.TIM_OC2_SetConfig  stm32f4xx_hal_tim.o
+    0x08002158   0x08002158   0x00000004   Code   RO          357    i.UsageFault_Handler  stm32f4xx_it.o
+    0x0800215c   0x0800215c   0x000000b4   Code   RO           14    i._Z18SystemClock_Configv  main.o
+    0x08002210   0x08002210   0x00000008   Code   RO          520    i._ZN11Class_Motor25Get_Rotate_Direction_FlagEv  motor.o
+    0x08002218   0x08002218   0x00000006   Code   RO          521    i._ZN11Class_Motor25Set_Rotate_Direction_FlagE21Enum_Rotate_Direction  motor.o
+    0x0800221e   0x0800221e   0x000000a6   Code   RO          523    i._ZN11Class_Motor6OutputEv  motor.o
+    0x080022c4   0x080022c4   0x00000016   Code   RO          458    i._ZN13Class_Chassis12Set_VelocityE12SpeedTypeDef  chassis.o
+    0x080022da   0x080022da   0x00000028   Code   RO          459    i._ZN13Class_Chassis18Set_Control_MethodE19Enum_Control_Method  chassis.o
+    0x08002302   0x08002302   0x00000002   PAD
+    0x08002304   0x08002304   0x000001a8   Code   RO          461    i._ZN13Class_Chassis35Calculate_TIM_PeriodElapsedCallbackEv  chassis.o
+    0x080024ac   0x080024ac   0x00000518   Code   RO          462    i._ZN13Class_Chassis4InitE17TIM_HandleTypeDefS0_  chassis.o
+    0x080029c4   0x080029c4   0x00000006   Code   RO          529    i._ZN29Class_Motor_With_Hall_Encoder16Set_Omega_TargetEf  motor.o
+    0x080029ca   0x080029ca   0x00000006   Code   RO          531    i._ZN29Class_Motor_With_Hall_Encoder18Set_Control_MethodE19Enum_Control_Method  motor.o
+    0x080029d0   0x080029d0   0x00000140   Code   RO          534    i._ZN29Class_Motor_With_Hall_Encoder35Calculate_TIM_PeriodElapsedCallbackEv  motor.o
+    0x08002b10   0x08002b10   0x000000fe   Code   RO          535    i._ZN29Class_Motor_With_Hall_Encoder4InitE17TIM_HandleTypeDefhtP12GPIO_TypeDeftS2_S0_tS2_tS2_  motor.o
+    0x08002c0e   0x08002c0e   0x00000002   PAD
+    0x08002c10   0x08002c10   0x0000007c   Code   RO           57    i._ZN29Class_Motor_With_Hall_EncoderC1Ev  main.o
+    0x08002c8c   0x08002c8c   0x00000070   Code   RO          926    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC1_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef  stm32f4xx_hal_tim.o
+    0x08002cfc   0x08002cfc   0x00000078   Code   RO          927    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC3_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef  stm32f4xx_hal_tim.o
+    0x08002d74   0x08002d74   0x00000054   Code   RO          928    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5217TIM_OC4_SetConfigEP11TIM_TypeDefP18TIM_OC_InitTypeDef  stm32f4xx_hal_tim.o
+    0x08002dc8   0x08002dc8   0x00000012   Code   RO          933    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5218TIM_ITRx_SetConfigEP11TIM_TypeDefj  stm32f4xx_hal_tim.o
+    0x08002dda   0x08002dda   0x00000026   Code   RO          938    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI1_ConfigInputStageEP11TIM_TypeDefjj  stm32f4xx_hal_tim.o
+    0x08002e00   0x08002e00   0x00000028   Code   RO          939    i._ZN41_INTERNAL_19_stm32f4xx_hal_tim_c_a9d95b5224TIM_TI2_ConfigInputStageEP11TIM_TypeDefjj  stm32f4xx_hal_tim.o
+    0x08002e28   0x08002e28   0x00000028   Code   RO         2872    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc018__NVIC_SetPriorityE9IRQn_Typej  stm32f4xx_hal_cortex.o
+    0x08002e50   0x08002e50   0x00000010   Code   RO         2873    i._ZN44_INTERNAL_22_stm32f4xx_hal_cortex_c_2992dbc026__NVIC_GetPriorityGroupingEv  stm32f4xx_hal_cortex.o
+    0x08002e60   0x08002e60   0x00000006   Code   RO          668    i._ZN9Class_PID10Set_TargetEf  pid.o
+    0x08002e66   0x08002e66   0x00000002   PAD
+    0x08002e68   0x08002e68   0x00000220   Code   RO          676    i._ZN9Class_PID32Adjust_TIM_PeriodElapsedCallbackEv  pid.o
+    0x08003088   0x08003088   0x00000016   Code   RO          677    i._ZN9Class_PID4InitEfffff  pid.o
+    0x0800309e   0x0800309e   0x00000006   Code   RO          678    i._ZN9Class_PID7Get_OutEv  pid.o
+    0x080030a4   0x080030a4   0x00000006   Code   RO          682    i._ZN9Class_PID7Set_NowEf  pid.o
+    0x080030aa   0x080030aa   0x00000002   PAD
+    0x080030ac   0x080030ac   0x00000070   Code   RO           54    i._ZN9Class_PIDC1Ev  main.o
+    0x0800311c   0x0800311c   0x00000024   Code   RO         3362    i.__aeabi_vec_ctor_nocookie_nodtor  cpprt_w.l(aeabi_vec_ctor_nocookie_nodtor.o)
+    0x08003140   0x08003140   0x00000034   Code   RO           15    i.__sti___6_main_c_Chassis  main.o
+    0x08003174   0x08003174   0x00000320   Code   RO           16    i.main              main.o
+    0x08003494   0x08003494   0x00000028   Code   RO          500    t._Z14Math_ConstrainIfEvPT_S0_S0_  chassis.o
+    0x080034bc   0x080034bc   0x00000014   Code   RO          655    t._Z14Math_ConstrainIiEvPT_S0_S0_  motor.o
+    0x080034d0   0x080034d0   0x0000001a   Code   RO          770    t._Z8Math_AbsIfET_S0_  pid.o
+    0x080034ea   0x080034ea   0x0000000e   Code   RO          648    t._Z8Math_AbsIiET_S0_  motor.o
+    0x080034f8   0x080034f8   0x0000000a   Code   RO         3440    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08003502   0x08003502   0x00000002   PAD
+    0x08003504   0x08003504   0x00000054   Data   RO           22    .constdata          main.o
+    0x08003558   0x08003558   0x00000018   Data   RO         3312    .constdata          system_stm32f4xx.o
+    0x08003570   0x08003570   0x00000020   Data   RO         3655    Region$$Table       anon$$obj.o
+    0x08003590   0x08003590   0x00000004   Data   RO           23    .init_array         main.o
+    0x08003594   0x08003590   0x00000000   Data   RO         3357    .init_array         c_w.l(init_aeabi.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003404, Size: 0x00000e98, Max: 0x0001c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003594, Size: 0x00000e98, Max: 0x0001c000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003404   0x00000009   Data   RW         3068    .data               stm32f4xx_hal.o
-    0x20000009   0x0800340d   0x00000003   PAD
-    0x2000000c   0x08003410   0x00000004   Data   RW         3313    .data               system_stm32f4xx.o
+    0x20000000   0x08003594   0x00000009   Data   RW         3068    .data               stm32f4xx_hal.o
+    0x20000009   0x0800359d   0x00000003   PAD
+    0x2000000c   0x080035a0   0x00000004   Data   RW         3313    .data               system_stm32f4xx.o
     0x20000010        -       0x000006c0   Zero   RW           21    .bss                main.o
     0x200006d0        -       0x00000168   Zero   RW          282    .bss                tim.o
     0x20000838        -       0x00000060   Zero   RW         3470    .bss                c_w.l(libspace.o)
@@ -2657,7 +2657,7 @@ Memory Map of the image
     0x20000a98        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x08003414, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x080035a4, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
@@ -2670,8 +2670,8 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       1830         44          0          0          0       4029   chassis.o
-       460         28          0          0          0     675355   gpio.o
-      1082         60         88          0       1728     683138   main.o
+       668         28          0          0          0     675507   gpio.o
+      1274         60         88          0       1728     683210   main.o
        800          4          0          0          0       5688   motor.o
        610          4          0          0          0       3483   pid.o
         64         26        392          0       1536        836   startup_stm32f407xx.o
@@ -2687,7 +2687,7 @@ Image component sizes
       1676         96          0          0        360       5952   tim.o
 
     ----------------------------------------------------------------------
-     11994        606        536         16       3624    1452618   Object Totals
+     12394        606        536         16       3624    1452842   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         12          0          0          3          0          0   (incl. Padding)
 
@@ -2744,15 +2744,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12780        632        536         16       3720    1445726   Grand Totals
-     12780        632        536         16       3720    1445726   ELF Image Totals
-     12780        632        536         16          0          0   ROM Totals
+     13180        632        536         16       3720    1445950   Grand Totals
+     13180        632        536         16       3720    1445950   ELF Image Totals
+     13180        632        536         16          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                13316 (  13.00kB)
+    Total RO  Size (Code + RO Data)                13716 (  13.39kB)
     Total RW  Size (RW Data + ZI Data)              3736 (   3.65kB)
-    Total ROM Size (Code + RO Data + RW Data)      13332 (  13.02kB)
+    Total ROM Size (Code + RO Data + RW Data)      13732 (  13.41kB)
 
 ==============================================================================
 

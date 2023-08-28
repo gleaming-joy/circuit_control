@@ -97,7 +97,7 @@ int main(void)
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
 
-  //底盘初始化
+  //底盘初始�?
   Chassis.Init(CHASSIS_MOTOR_PWM_DRIVER_TIM, CHASSIS_MOTOR_CALCULATE_TIM);
   Chassis.Set_Control_Method(Control_Method_OPENLOOP);
 
@@ -145,7 +145,7 @@ int main(void)
   };
 
   Chassis.Set_Velocity(v_stop);
-  HAL_Delay(1500);
+  HAL_Delay(1000);
 
   while (1)
   {
@@ -157,21 +157,44 @@ int main(void)
     Chassis.Set_Velocity(v_front);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);
+    Chassis.Set_Velocity(v_stop);
+    Chassis.Calculate_TIM_PeriodElapsedCallback();
+    HAL_Delay(1000);
+
     Chassis.Set_Velocity(v_right);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);
+    Chassis.Set_Velocity(v_stop);
+    Chassis.Calculate_TIM_PeriodElapsedCallback();
+    HAL_Delay(1000);
+
     Chassis.Set_Velocity(v_rotate);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);
+    Chassis.Set_Velocity(v_stop);
+    Chassis.Calculate_TIM_PeriodElapsedCallback();
+    HAL_Delay(1000);
+
     Chassis.Set_Velocity(v_crotate);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);
+    Chassis.Set_Velocity(v_stop);
+    Chassis.Calculate_TIM_PeriodElapsedCallback();
+    HAL_Delay(1000);
+
     Chassis.Set_Velocity(v_left);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);
+    Chassis.Set_Velocity(v_stop);
+    Chassis.Calculate_TIM_PeriodElapsedCallback();
+    HAL_Delay(1000);
+
     Chassis.Set_Velocity(v_back);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);
+    Chassis.Set_Velocity(v_stop);
+    Chassis.Calculate_TIM_PeriodElapsedCallback();
+    HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }

@@ -86,28 +86,27 @@ void Error_Handler(void);
 #define Pin_Pushpull_MotorDirectionB4_Pin GPIO_PIN_14
 #define Pin_Pushpull_MotorDirectionB4_GPIO_Port GPIOE
 // »ô¶û±àÂëÆ÷ÖÐ¶Ï
-
-//Ã»¸ÄµÄ
-#define Pin_Exti_HallEncoderA1_Pin GPIO_PIN_0
-#define Pin_Exti_HallEncoderA1_GPIO_Port GPIOC
-#define Pin_Exti_HallEncoderA1_EXTI_IRQn EXTI0_IRQn
-#define Pin_Exti_HallEncoderA2_Pin GPIO_PIN_1
-#define Pin_Exti_HallEncoderA2_GPIO_Port GPIOC
-#define Pin_Exti_HallEncoderA2_EXTI_IRQn EXTI1_IRQn
-#define Pin_Exti_HallEncoderA3_Pin GPIO_PIN_2
-#define Pin_Exti_HallEncoderA3_GPIO_Port GPIOC
-#define Pin_Exti_HallEncoderA3_EXTI_IRQn EXTI2_IRQn
-#define Pin_Exti_HallEncoderA4_Pin GPIO_PIN_3
-#define Pin_Exti_HallEncoderA4_GPIO_Port GPIOC
-#define Pin_Exti_HallEncoderA4_EXTI_IRQn EXTI3_IRQn
-#define Pin_PullDown_HallEncoderB1_Pin GPIO_PIN_8
-#define Pin_PullDown_HallEncoderB1_GPIO_Port GPIOC
-#define Pin_PullDown_HallEncoderB2_Pin GPIO_PIN_9
-#define Pin_PullDown_HallEncoderB2_GPIO_Port GPIOC
-#define Pin_PullDown_HallEncoderB3_Pin GPIO_PIN_10
-#define Pin_PullDown_HallEncoderB3_GPIO_Port GPIOC
-#define Pin_PullDown_HallEncoderB4_Pin GPIO_PIN_11
-#define Pin_PullDown_HallEncoderB4_GPIO_Port GPIOC
+#define Pin_Exti_HallEncoderA1_Pin GPIO_PIN_7
+#define Pin_Exti_HallEncoderA1_GPIO_Port GPIOF
+#define Pin_Exti_HallEncoderA1_EXTI_IRQn EXTI7_IRQn
+#define Pin_Exti_HallEncoderA2_Pin GPIO_PIN_6
+#define Pin_Exti_HallEncoderA2_GPIO_Port GPIOF
+#define Pin_Exti_HallEncoderA2_EXTI_IRQn EXTI6_IRQn
+#define Pin_Exti_HallEncoderA3_Pin GPIO_PIN_10
+#define Pin_Exti_HallEncoderA3_GPIO_Port GPIOD
+#define Pin_Exti_HallEncoderA3_EXTI_IRQn EXTI10_IRQn
+#define Pin_Exti_HallEncoderA4_Pin GPIO_PIN_15
+#define Pin_Exti_HallEncoderA4_GPIO_Port GPIOE
+#define Pin_Exti_HallEncoderA4_EXTI_IRQn EXTI15_IRQn
+// »ô¶û±àÂëÆ÷GPIO
+#define Pin_PullDown_HallEncoderB1_Pin GPIO_PIN_11
+#define Pin_PullDown_HallEncoderB1_GPIO_Port GPIOF
+#define Pin_PullDown_HallEncoderB2_Pin GPIO_PIN_8
+#define Pin_PullDown_HallEncoderB2_GPIO_Port GPIOF
+#define Pin_PullDown_HallEncoderB3_Pin GPIO_PIN_8
+#define Pin_PullDown_HallEncoderB3_GPIO_Port GPIOD
+#define Pin_PullDown_HallEncoderB4_Pin GPIO_PIN_7
+#define Pin_PullDown_HallEncoderB4_GPIO_Port GPIOE
 
 /* USER CODE END Private defines */
 

@@ -3,27 +3,39 @@
 绿色PWM，蓝色第一个GPIO，紫色是第二个 
 - 0: 麦轮左前 Motor[2]  
 tim4: CH3 PD14  
-GPIO_Output: PD9 PF4
+GPIO_Output: PD9 PF4  
+GPIO_Input: PD8  
+GPIO_EXTI10: PD10  
 
 - 1: 麦轮右前 Motor[3]  
 tim4: CH4 PD15  
-GPIO_Output: PE8 PE14
+GPIO_Output: PE8 PE14  
+GPIO_Input: PE7  
+GPIO_EXTI15: PE15   
 
 - 2: 麦轮左后 Motor[1]  
 tim4: CH2 PD13  
-GPIO_Output: PD11 PB13
+GPIO_Output: PD11 PB13  
+GPIO_Input: PF8   
+GPIO_EXTI6: PF6  
 
 - 3: 麦轮右后 Motor[0]  
 tim4: CH1 PD12  
-GPIO_Output: PF5 PB12
+GPIO_Output: PF5 PB12  
+GPIO_Input: PF11  
+GPIO_EXTI7: PF7   
 
 - 4: 左胶轮  
 tim2: CH2 PA1  
-GPIO_Output: PC3 PA3
+GPIO_Output: PC3 PA3  
+GPIO_Input: PA5  
+GPIO_EXTI4: PC4  
 
 - 5: 右胶轮  
 tim2: CH3 PA2  
-GPIO_Output: PC2 PA4 
+GPIO_Output: PC2 PA4   
+GPIO_Input: PC5   
+GPIO_EXTI2: PB2   
 
 ## 舵机
 机械爪舵机由下往上编号  
