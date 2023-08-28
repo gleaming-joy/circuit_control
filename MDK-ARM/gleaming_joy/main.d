@@ -30,11 +30,9 @@ gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 gleaming_joy\main.o: ../Core/Inc/tim.h
 gleaming_joy\main.o: ../Core/Inc/gpio.h
-gleaming_joy\main.o: .\USER\Module\Chassis\Chassis.hpp
-gleaming_joy\main.o: .\USER\Device\Motor\Motor.hpp
-gleaming_joy\main.o: .\USER\Algorithm\PID\PID.hpp
+gleaming_joy\main.o: ..\USER\Chassis\chassis.hpp
+gleaming_joy\main.o: ..\USER\Motor\motor.hpp
+gleaming_joy\main.o: ..\USER\PID\PID.hpp
 gleaming_joy\main.o: D:\software\keil\KEIL5_MDK\ARM\ARMCC\Bin\..\include\limits.h
-gleaming_joy\main.o: .\USER\Device\DR16\DR16.hpp

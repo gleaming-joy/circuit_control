@@ -1,5 +1,5 @@
-gleaming_joy\pid.o: USER\Algorithm\PID\PID.cpp
-gleaming_joy\pid.o: USER\Algorithm\PID\PID.hpp
+gleaming_joy\pid.o: ..\USER\PID\PID.cpp
+gleaming_joy\pid.o: ..\USER\PID\PID.hpp
 gleaming_joy\pid.o: ../Core/Inc/main.h
 gleaming_joy\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 gleaming_joy\pid.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -31,5 +31,4 @@ gleaming_joy\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gleaming_joy\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 gleaming_joy\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gleaming_joy\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-gleaming_joy\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 gleaming_joy\pid.o: D:\software\keil\KEIL5_MDK\ARM\ARMCC\Bin\..\include\limits.h

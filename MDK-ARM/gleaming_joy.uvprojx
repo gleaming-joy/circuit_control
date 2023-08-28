@@ -338,7 +338,7 @@
               <MiscControls>--cpp11</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;.\USER\Algorithm\PID;.\USER\Device\Motor;.\USER\Device\Steer;.\USER\Module\Chassis;.\USER\Device\DR16</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\USER\Motor;..\USER\Chassis;..\USER\PID;..\USER\Steer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,29 +418,24 @@
               <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
             <File>
+              <FileName>motor.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\USER\Motor\motor.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>chassis.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\USER\Chassis\chassis.cpp</FilePath>
+            </File>
+            <File>
               <FileName>PID.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\USER\Algorithm\PID\PID.cpp</FilePath>
+              <FilePath>..\USER\PID\PID.cpp</FilePath>
             </File>
             <File>
-              <FileName>Motor.cpp</FileName>
+              <FileName>steer.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\USER\Device\Motor\Motor.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Steer.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\USER\Device\Steer\Steer.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Chassis.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\USER\Module\Chassis\Chassis.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>DR16.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\USER\Device\DR16\DR16.cpp</FilePath>
+              <FilePath>..\USER\Steer\steer.cpp</FilePath>
             </File>
           </Files>
         </Group>

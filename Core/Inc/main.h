@@ -36,13 +36,10 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-extern TIM_HandleTypeDef htim1;
-extern TIM_HandleTypeDef htim2;
-extern TIM_HandleTypeDef htim3;
+
 extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim9;
-//extern UART_HandleTypeDef huart1;
-	
+
+
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -52,12 +49,11 @@ extern TIM_HandleTypeDef htim9;
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-//This is the timer of 4 motor drivers of the chassis
+
+//底盘麦轮电机的计时器
 #define CHASSIS_MOTOR_PWM_DRIVER_TIM htim4
-//This is the timer of speed calculating unit of the chassis
 #define CHASSIS_MOTOR_CALCULATE_TIM htim2
-//This is the uart of controller
-//#define CHASSIS_DR16_CONTROL_UART huart1
+//底盘速度计算的计时器
 
 /* USER CODE END EM */
 
@@ -71,6 +67,27 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 
 /* USER CODE BEGIN Private defines */
+
+// 麦轮电机GPIO
+#define Pin_Pushpull_MotorDirectionA1_Pin GPIO_PIN_5
+#define Pin_Pushpull_MotorDirectionA1_GPIO_Port GPIOF
+#define Pin_Pushpull_MotorDirectionA2_Pin GPIO_PIN_11
+#define Pin_Pushpull_MotorDirectionA2_GPIO_Port GPIOD
+#define Pin_Pushpull_MotorDirectionA3_Pin GPIO_PIN_9
+#define Pin_Pushpull_MotorDirectionA3_GPIO_Port GPIOD
+#define Pin_Pushpull_MotorDirectionA4_Pin GPIO_PIN_8
+#define Pin_Pushpull_MotorDirectionA4_GPIO_Port GPIOE
+#define Pin_Pushpull_MotorDirectionB1_Pin GPIO_PIN_12
+#define Pin_Pushpull_MotorDirectionB1_GPIO_Port GPIOB
+#define Pin_Pushpull_MotorDirectionB2_Pin GPIO_PIN_13
+#define Pin_Pushpull_MotorDirectionB2_GPIO_Port GPIOB
+#define Pin_Pushpull_MotorDirectionB3_Pin GPIO_PIN_4
+#define Pin_Pushpull_MotorDirectionB3_GPIO_Port GPIOF
+#define Pin_Pushpull_MotorDirectionB4_Pin GPIO_PIN_14
+#define Pin_Pushpull_MotorDirectionB4_GPIO_Port GPIOE
+// 霍尔编码器中断
+
+//没改的
 #define Pin_Exti_HallEncoderA1_Pin GPIO_PIN_0
 #define Pin_Exti_HallEncoderA1_GPIO_Port GPIOC
 #define Pin_Exti_HallEncoderA1_EXTI_IRQn EXTI0_IRQn
@@ -83,40 +100,14 @@ void Error_Handler(void);
 #define Pin_Exti_HallEncoderA4_Pin GPIO_PIN_3
 #define Pin_Exti_HallEncoderA4_GPIO_Port GPIOC
 #define Pin_Exti_HallEncoderA4_EXTI_IRQn EXTI3_IRQn
-#define Pin_Pushpull_MotorDirectionA1_Pin GPIO_PIN_9
-#define Pin_Pushpull_MotorDirectionA1_GPIO_Port GPIOD
-#define Pin_Pushpull_MotorDirectionA2_Pin GPIO_PIN_8
-#define Pin_Pushpull_MotorDirectionA2_GPIO_Port GPIOE
-#define Pin_Pushpull_MotorDirectionA3_Pin GPIO_PIN_11
-#define Pin_Pushpull_MotorDirectionA3_GPIO_Port GPIOD
-#define Pin_Pushpull_MotorDirectionA4_Pin GPIO_PIN_5
-#define Pin_Pushpull_MotorDirectionA4_GPIO_Port GPIOF
-#define Pin_Pushpull_MotorDirectionB1_Pin GPIO_PIN_4
-#define Pin_Pushpull_MotorDirectionB1_GPIO_Port GPIOF
-#define Pin_Pushpull_MotorDirectionB2_Pin GPIO_PIN_14
-#define Pin_Pushpull_MotorDirectionB2_GPIO_Port GPIOE
-#define Pin_Pushpull_MotorDirectionB3_Pin GPIO_PIN_13
-#define Pin_Pushpull_MotorDirectionB3_GPIO_Port GPIOB
-#define Pin_Pushpull_MotorDirectionB4_Pin GPIO_PIN_12
-#define Pin_Pushpull_MotorDirectionB4_GPIO_Port GPIOB
 #define Pin_PullDown_HallEncoderB1_Pin GPIO_PIN_8
 #define Pin_PullDown_HallEncoderB1_GPIO_Port GPIOC
 #define Pin_PullDown_HallEncoderB2_Pin GPIO_PIN_9
 #define Pin_PullDown_HallEncoderB2_GPIO_Port GPIOC
-#define Pin_UART_DR16_Receive_Pin GPIO_PIN_10
-#define Pin_UART_DR16_Receive_GPIO_Port GPIOA
 #define Pin_PullDown_HallEncoderB3_Pin GPIO_PIN_10
 #define Pin_PullDown_HallEncoderB3_GPIO_Port GPIOC
 #define Pin_PullDown_HallEncoderB4_Pin GPIO_PIN_11
 #define Pin_PullDown_HallEncoderB4_GPIO_Port GPIOC
-#define Pin_PWM_MotorDriver1_Pin GPIO_PIN_14
-#define Pin_PWM_MotorDriver1_GPIO_Port GPIOD
-#define Pin_PWM_MotorDriver2_Pin GPIO_PIN_15
-#define Pin_PWM_MotorDriver2_GPIO_Port GPIOD
-#define Pin_PWM_MotorDriver3_Pin GPIO_PIN_13
-#define Pin_PWM_MotorDriver3_GPIO_Port GPIOD
-#define Pin_PWM_MotorDriver4_Pin GPIO_PIN_12
-#define Pin_PWM_MotorDriver4_GPIO_Port GPIOD
 
 /* USER CODE END Private defines */
 

@@ -1,19 +1,19 @@
 # gleaming_joy！
  ## 电机  
 绿色PWM，蓝色第一个GPIO，紫色是第二个 
-- 0: 麦轮左前  
+- 0: 麦轮左前 Motor[2]  
 tim4: CH3 PD14  
 GPIO_Output: PD9 PF4
 
-- 1: 麦轮右前  
+- 1: 麦轮右前 Motor[3]  
 tim4: CH4 PD15  
 GPIO_Output: PE8 PE14
 
-- 2: 麦轮左后  
+- 2: 麦轮左后 Motor[1]  
 tim4: CH2 PD13  
 GPIO_Output: PD11 PB13
 
-- 3: 麦轮右后  
+- 3: 麦轮右后 Motor[0]  
 tim4: CH1 PD12  
 GPIO_Output: PF5 PB12
 

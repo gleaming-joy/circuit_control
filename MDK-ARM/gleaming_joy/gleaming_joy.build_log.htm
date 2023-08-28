@@ -22,16 +22,55 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 D:\ѧϰ\robogame\gleaming_joy\MDK-ARM\gleaming_joy.uvprojx
-Project File Date:  07/30/2023
+Project File Date:  08/28/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\software\keil\KEIL5_MDK\ARM\ARMCC\Bin'
 Build target 'gleaming_joy'
+compiling motor.cpp...
+..\USER\PID\PID.hpp(113): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Motor\motor.hpp(148): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Motor\motor.cpp(339): warning:  #1-D: last line of file ends without a newline
+  /* Function prototypes -------------------------------------------------------*/
+..\USER\Motor\motor.cpp: 3 warnings, 0 errors
+compiling stm32f4xx_hal_msp.c...
+compiling PID.cpp...
+..\USER\PID\PID.hpp(113): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\PID\PID.cpp(282): warning:  #1-D: last line of file ends without a newline
+  /* Function prototypes -------------------------------------------------------*/
+..\USER\PID\PID.cpp: 2 warnings, 0 errors
+compiling stm32f4xx_it.c...
 compiling main.c...
+..\USER\PID\PID.hpp(113): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Motor\motor.hpp(148): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Chassis\chassis.hpp(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c: 3 warnings, 0 errors
+compiling steer.cpp...
+..\USER\Steer\Steer.hpp(62): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Steer\steer.cpp(83): warning:  #1-D: last line of file ends without a newline
+  /* Function prototypes -------------------------------------------------------*/
+..\USER\Steer\steer.cpp: 2 warnings, 0 errors
+compiling tim.c...
+compiling gpio.c...
+compiling chassis.cpp...
+..\USER\PID\PID.hpp(113): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Motor\motor.hpp(148): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Chassis\Chassis.hpp(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\Chassis\chassis.cpp: 3 warnings, 0 errors
 linking...
-Program Size: Code=12796 RO-data=548 RW-data=16 ZI-data=3840  
+Program Size: Code=12780 RO-data=536 RW-data=16 ZI-data=3720  
 FromELF: creating hex file...
-"gleaming_joy\gleaming_joy.axf" - 0 Error(s), 0 Warning(s).
+"gleaming_joy\gleaming_joy.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,7 +93,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.2
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>

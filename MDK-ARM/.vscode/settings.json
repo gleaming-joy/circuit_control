@@ -1,8 +1,6 @@
 {
     "files.associations": {
         "motor.h": "c",
-        "steer.h": "c",
-        "main.h": "c",
-        "fstream": "cpp"
+        "main.h": "c"
     }
 }

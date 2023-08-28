@@ -1,14 +1,3 @@
-/**
- * @file Steer.cpp
- * @author yssickjgd 1345578933@qq.com
- * @brief èˆµæœºæ§åˆ¶
- * @version 0.1
- * @date 2022-05-11
- * 
- * @copyright Copyright (c) 2022
- * 
- */
-
 /* Includes ------------------------------------------------------------------*/
 
 #include "Steer.hpp"
@@ -22,15 +11,15 @@
 /* Private function declarations ---------------------------------------------*/
 
 /**
- * @brief é™å¹…å‡½æ•°
- * 
- * @tparam Type 
- * @param x ä¼ å…¥æ•°æ®
- * @param Min æœ€å°å€¼
- * @param Max æœ€å¤§å€¼
+ * @brief ÏŞ·ùº¯Êı
+ *
+ * @tparam Type
+ * @param x ´«ÈëÊı¾İ
+ * @param Min ×îĞ¡Öµ
+ * @param Max ×î´óÖµ
  */
 template <typename Type>
-void Math_Constrain(Type *x, Type Min, Type Max)
+void Math_Constrain(Type* x, Type Min, Type Max)
 {
     if (*x < Min)
     {
@@ -43,23 +32,23 @@ void Math_Constrain(Type *x, Type Min, Type Max)
 }
 
 /**
- * @brief æ±‚ç»å¯¹å€¼
- * 
- * @tparam Type 
- * @param x ä¼ å…¥æ•°æ®
- * @return Type xçš„ç»å¯¹å€¼
+ * @brief Çó¾ø¶ÔÖµ
+ *
+ * @tparam Type
+ * @param x ´«ÈëÊı¾İ
+ * @return Type xµÄ¾ø¶ÔÖµ
  */
 template <typename Type>
 Type Math_Abs(Type x)
 {
-    return ((x > 0) ? x : -x); 
+    return ((x > 0) ? x : -x);
 }
 
 /**
- * @brief åˆå§‹åŒ–èˆµæœº
- * 
- * @param __Driver_PWM_TIM ç”µæœºé©±åŠ¨å®šæ—¶å™¨ç¼–å·
- * @param __Driver_PWM_TIM_Channel_x ç”µæœºé©±åŠ¨å®šæ—¶å™¨é€šé“
+ * @brief ³õÊ¼»¯¶æ»ú
+ *
+ * @param __Driver_PWM_TIM µç»úÇı¶¯¶¨Ê±Æ÷±àºÅ
+ * @param __Driver_PWM_TIM_Channel_x µç»úÇı¶¯¶¨Ê±Æ÷Í¨µÀ
  */
 void Class_Steer::Init(TIM_HandleTypeDef __Driver_PWM_TIM, uint8_t __Driver_PWM_TIM_Channel_x)
 {
@@ -69,21 +58,21 @@ void Class_Steer::Init(TIM_HandleTypeDef __Driver_PWM_TIM, uint8_t __Driver_PWM_
 }
 
 /**
- * @brief è®¾å®šèˆµæœºå ç©ºæ¯”, ç”±æ­¤ç¡®å®šè¾“å‡º
- * 
- * @param output èˆµæœºçš„è§’åº¦
+ * @brief Éè¶¨¶æ»úÕ¼¿Õ±È, ÓÉ´ËÈ·¶¨Êä³ö
+ *
+ * @param output ¶æ»úµÄ½Ç¶È
  */
 void Class_Steer::Set_Out(float __Out)
 {
-    //å ç©ºæ¯”å¯¹åº”æ—¶é—´, å ç©ºæ¯”
+    //Õ¼¿Õ±È¶ÔÓ¦Ê±¼ä, Õ¼¿Õ±È
     float time;
     time = STEER_PWM_MIDDLE + (__Out - Max_Angle / 2) / (Max_Angle / 2) * STEER_PWM_EXTREME_TO_MIDDLE;
     Out = time / STEER_PWM_PERIOD * STEER_PWM_PRESCALER;
 }
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void Class_Steer::Output()
 {
@@ -92,5 +81,3 @@ void Class_Steer::Output()
 }
 
 /* Function prototypes -------------------------------------------------------*/
-
-/************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/

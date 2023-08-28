@@ -1,17 +1,6 @@
-/**
- * @file Motor.cpp
- * @author yssickjgd 1345578933@qq.com
- * @brief 霍尔编码器-直流电机控制
- * @version 0.1
- * @date 2022-05-03
- * 
- * @copyright Copyright (c) 2022
- * 
- */
-
 /* Includes ------------------------------------------------------------------*/
 
-#include "Motor.hpp"
+#include "motor.hpp"
 
 /* Private macros ------------------------------------------------------------*/
 
@@ -80,7 +69,7 @@ void Class_Motor::Init(TIM_HandleTypeDef __Driver_PWM_TIM, uint8_t __Driver_PWM_
 
 /**
  * @brief 设定电机正向旋转方向
- * 
+ *
  * @param __Rotate_Direction_Flag 电机正向旋转方向
  */
 void Class_Motor::Set_Rotate_Direction_Flag(Enum_Rotate_Direction __Rotate_Direction_Flag)
@@ -89,9 +78,9 @@ void Class_Motor::Set_Rotate_Direction_Flag(Enum_Rotate_Direction __Rotate_Direc
 }
 
 /**
- * @brief 设定电机PWM满占空比对应的数值
- * 
- * @param __Motor_Full_Omega 电机PWM满占空比对应的数值
+ * @brief 设定电机减速后的满转转速
+ *
+ * @param __Motor_Full_Omega 电机减速后满转转速对应的数值
  */
 void Class_Motor::Set_Motor_Full_Omega(float __Motor_Full_Omega)
 {
@@ -100,7 +89,7 @@ void Class_Motor::Set_Motor_Full_Omega(float __Motor_Full_Omega)
 
 /**
  * @brief 设定电机PWM满占空比对应的数值
- * 
+ *
  * @param __Motor_PWM_Period 电机PWM满占空比对应的数值
  */
 void Class_Motor::Set_Motor_PWM_Period(int32_t __Motor_PWM_Period)
@@ -110,7 +99,7 @@ void Class_Motor::Set_Motor_PWM_Period(int32_t __Motor_PWM_Period)
 
 /**
  * @brief 设定电机目标输出强度, 即电机PWM占空比的分子
- * 
+ *
  * @param __Out 电机目标输出强度, 即电机PWM占空比的分子
  */
 void Class_Motor::Set_Out(int32_t __Out)
@@ -120,7 +109,7 @@ void Class_Motor::Set_Out(int32_t __Out)
 
 /**
  * @brief 获取电机正向旋转方向
- * 
+ *
  * @return Enum_Rotate_Direction 电机正向旋转方向
  */
 Enum_Rotate_Direction Class_Motor::Get_Rotate_Direction_Flag()
@@ -130,7 +119,7 @@ Enum_Rotate_Direction Class_Motor::Get_Rotate_Direction_Flag()
 
 /**
  * @brief 获取电机减速后满转转速, rad/s
- * 
+ *
  * @return float 电机减速后满转转速, rad/s
  */
 float Class_Motor::Get_Motor_Full_Omega()
@@ -140,7 +129,7 @@ float Class_Motor::Get_Motor_Full_Omega()
 
 /**
  * @brief 获取电机PWM满占空比对应的数值
- * 
+ *
  * @return int32_t 电机PWM满占空比对应的数值
  */
 int32_t Class_Motor::Get_Motor_PWM_Period()
@@ -150,7 +139,7 @@ int32_t Class_Motor::Get_Motor_PWM_Period()
 
 /**
  * @brief 获取电机目标输出强度, 即电机PWM占空比的分子
- * 
+ *
  * @return int32_t 电机目标输出强度, 即电机PWM占空比的分子
  */
 int32_t Class_Motor::Get_Out()
@@ -160,23 +149,23 @@ int32_t Class_Motor::Get_Out()
 
 /**
  * @brief 设定电机占空比, 确定输出
- * 
+ *
  */
 void Class_Motor::Output()
 {
     if (Out == 0)
     {
-        HAL_GPIO_WritePin(Output_A_GPIOx, Output_A_GPIO_Pin, GPIO_PIN_RESET); 
+        HAL_GPIO_WritePin(Output_A_GPIOx, Output_A_GPIO_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(Output_B_GPIOx, Output_B_GPIO_Pin, GPIO_PIN_RESET);
     }
     else if (Out > 0)
     {
-        HAL_GPIO_WritePin(Output_A_GPIOx, Output_A_GPIO_Pin, GPIO_PIN_SET); 
+        HAL_GPIO_WritePin(Output_A_GPIOx, Output_A_GPIO_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(Output_B_GPIOx, Output_B_GPIO_Pin, GPIO_PIN_RESET);
     }
     else if (Out < 0)
     {
-        HAL_GPIO_WritePin(Output_A_GPIOx, Output_A_GPIO_Pin, GPIO_PIN_RESET); 
+        HAL_GPIO_WritePin(Output_A_GPIOx, Output_A_GPIO_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(Output_B_GPIOx, Output_B_GPIO_Pin, GPIO_PIN_SET);
     }
     __HAL_TIM_SetCompare(&Driver_PWM_TIM, Driver_PWM_TIM_Channel_x, Math_Abs(Out));
@@ -184,7 +173,7 @@ void Class_Motor::Output()
 
 /**
  * @brief 初始化电机
- * 
+ *
  * @param __Driver_PWM_TIM 电机驱动定时器编号
  * @param __Driver_PWM_TIM_Channel_x 电机驱动定时器通道
  * @param __Output_A_GPIO_Pin 电机方向A相引脚号
@@ -197,7 +186,7 @@ void Class_Motor::Output()
  * @param __Input_B_GPIO_Pin 霍尔编码器方向B引脚号
  * @param __Input_B_GPIOx 霍尔编码器方向B引脚组
  */
-void Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef __Driver_PWM_TIM, uint8_t __Driver_PWM_TIM_Channel_x, uint16_t __Output_A_GPIO_Pin, GPIO_TypeDef *__Output_A_GPIOx, uint16_t __Output_B_GPIO_Pin, GPIO_TypeDef *__Output_B_GPIOx, TIM_HandleTypeDef __Calculate_TIM, uint16_t __Input_A_GPIO_Pin, GPIO_TypeDef *__Input_A_GPIOx, uint16_t __Input_B_GPIO_Pin, GPIO_TypeDef *__Input_B_GPIOx)
+void Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef __Driver_PWM_TIM, uint8_t __Driver_PWM_TIM_Channel_x, uint16_t __Output_A_GPIO_Pin, GPIO_TypeDef* __Output_A_GPIOx, uint16_t __Output_B_GPIO_Pin, GPIO_TypeDef* __Output_B_GPIOx, TIM_HandleTypeDef __Calculate_TIM, uint16_t __Input_A_GPIO_Pin, GPIO_TypeDef* __Input_A_GPIOx, uint16_t __Input_B_GPIO_Pin, GPIO_TypeDef* __Input_B_GPIOx)
 {
     Driver_PWM_TIM = __Driver_PWM_TIM;
     Driver_PWM_TIM_Channel_x = __Driver_PWM_TIM_Channel_x;
@@ -215,7 +204,7 @@ void Class_Motor_With_Hall_Encoder::Init(TIM_HandleTypeDef __Driver_PWM_TIM, uin
 
 /**
  * @brief 设定电机控制方式
- * 
+ *
  * @param __Control_Method 电机控制方式
  */
 void Class_Motor_With_Hall_Encoder::Set_Control_Method(Enum_Control_Method __Control_Method)
@@ -225,7 +214,7 @@ void Class_Motor_With_Hall_Encoder::Set_Control_Method(Enum_Control_Method __Con
 
 /**
  * @brief 设定目标电机转速, rad/s
- * 
+ *
  * @param __Omega_Target 目标电机转速, rad/s
  */
 void Class_Motor_With_Hall_Encoder::Set_Omega_Target(float __Omega_Target)
@@ -235,7 +224,7 @@ void Class_Motor_With_Hall_Encoder::Set_Omega_Target(float __Omega_Target)
 
 /**
  * @brief 设定电机减速后霍尔编码器编码数, /rad
- * 
+ *
  * @param __Motor_Encoder_Num_Per_Rad 目标电机转速, rad/s
  */
 void Class_Motor_With_Hall_Encoder::Set_Motor_Encoder_Num_Per_Rad(float __Motor_Encoder_Num_Per_Rad)
@@ -245,7 +234,7 @@ void Class_Motor_With_Hall_Encoder::Set_Motor_Encoder_Num_Per_Rad(float __Motor_
 
 /**
  * @brief 设定目标电机角度, rad
- * 
+ *
  * @param __Angle_Target 目标电机角度, rad
  */
 void Class_Motor_With_Hall_Encoder::Set_Angle_Target(float __Angle_Target)
@@ -254,8 +243,8 @@ void Class_Motor_With_Hall_Encoder::Set_Angle_Target(float __Angle_Target)
 }
 
 /**
- * @brief 设定电机控制方式
- * 
+ * @brief 获取电机控制方式
+ *
  * @return Enum_Control_Method 电机控制方式
  */
 Enum_Control_Method Class_Motor_With_Hall_Encoder::Get_Control_Method()
@@ -264,8 +253,8 @@ Enum_Control_Method Class_Motor_With_Hall_Encoder::Get_Control_Method()
 }
 
 /**
- * @brief 设定当前电机转速, rad/s
- * 
+ * @brief 获取当前电机转速, rad/s
+ *
  * @return float 当前电机转速, rad/s
  */
 float Class_Motor_With_Hall_Encoder::Get_Omega_Now()
@@ -274,8 +263,8 @@ float Class_Motor_With_Hall_Encoder::Get_Omega_Now()
 }
 
 /**
- * @brief 设定当前电机角度, rad
- * 
+ * @brief 获取当前电机角度, rad
+ *
  * @return float 当前电机角度, rad
  */
 float Class_Motor_With_Hall_Encoder::Get_Angle_Now()
@@ -285,12 +274,12 @@ float Class_Motor_With_Hall_Encoder::Get_Angle_Now()
 
 /**
  * @brief 霍尔编码器中断处理函数
- * 
+ *
  */
 void Class_Motor_With_Hall_Encoder::Hall_Encoder_GPIO_EXTI_Callback()
 {
     //计算电机转过的编码数, 以便后续算出角度和速度
-    if(((HAL_GPIO_ReadPin(Input_B_GPIOx, Input_B_GPIO_Pin) == 0) ^ (Rotate_Direction_Flag == CW)) == 0)
+    if (((HAL_GPIO_ReadPin(Input_B_GPIOx, Input_B_GPIO_Pin) == 0) ^ (Rotate_Direction_Flag == CW)) == 0)
     {
         Hall_Encoder_Count--;
     }
@@ -302,7 +291,7 @@ void Class_Motor_With_Hall_Encoder::Hall_Encoder_GPIO_EXTI_Callback()
 
 /**
  * @brief 定时器中断处理函数
- * 
+ *
  */
 void Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback()
 {
@@ -314,12 +303,12 @@ void Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback()
     Omega_Now = (float)delta / Motor_Encoder_Num_Per_Rad / MOTOR_CALCULATE_PERIOD;
     Prev_Hall_Encoder_Count = Hall_Encoder_Count;
 
-    if(Control_Method == Control_Method_OPENLOOP)
+    if (Control_Method == Control_Method_OPENLOOP)
     {
         //开环控制直接输出速度
         Out = Omega_Target * Motor_PWM_Period / Motor_Full_Omega;
     }
-    else if(Control_Method == Control_Method_OMEGA)
+    else if (Control_Method == Control_Method_OMEGA)
     {
         //速度控制, 单环PID
 
@@ -329,16 +318,16 @@ void Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback()
         Out = Omega_PID.Get_Out();
 
     }
-    else if(Control_Method == Control_Method_ANGLE)
+    else if (Control_Method == Control_Method_ANGLE)
     {
         //角度控制, 双环PID
 
         Angle_PID.Set_Target(Angle_Target);
-        
+
         Angle_PID.Set_Now(Angle_Now);
         Angle_PID.Adjust_TIM_PeriodElapsedCallback();
         Omega_PID.Set_Target(Angle_PID.Get_Out());
-			
+
         Omega_PID.Set_Now(Omega_Now);
         Omega_PID.Adjust_TIM_PeriodElapsedCallback();
         Out = Omega_PID.Get_Out();
@@ -348,5 +337,3 @@ void Class_Motor_With_Hall_Encoder::Calculate_TIM_PeriodElapsedCallback()
 }
 
 /* Function prototypes -------------------------------------------------------*/
-
-/************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/

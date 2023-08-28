@@ -1,14 +1,3 @@
-/**
- * @file PID.cpp
- * @author yssickjgd 1345578933@qq.com
- * @brief PIDç®—æ³•
- * @version 0.1
- * @date 2022-05-08
- * 
- * @copyright Copyright (c) 2022
- * 
- */
-
 /* Includes ------------------------------------------------------------------*/
 
 #include "PID.hpp"
@@ -22,15 +11,15 @@
 /* Private function declarations ---------------------------------------------*/
 
 /**
- * @brief é™å¹…å‡½æ•°
- * 
- * @tparam Type 
- * @param x ä¼ å…¥æ•°æ®
- * @param Min æœ€å°å€¼
- * @param Max æœ€å¤§å€¼
+ * @brief ÏŞ·ùº¯Êı
+ *
+ * @tparam Type
+ * @param x ´«ÈëÊı¾İ
+ * @param Min ×îĞ¡Öµ
+ * @param Max ×î´óÖµ
  */
 template <typename Type>
-void Math_Constrain(Type *x, Type Min, Type Max)
+void Math_Constrain(Type* x, Type Min, Type Max)
 {
     if (*x < Min)
     {
@@ -43,26 +32,26 @@ void Math_Constrain(Type *x, Type Min, Type Max)
 }
 
 /**
- * @brief æ±‚ç»å¯¹å€¼
- * 
- * @tparam Type 
- * @param x ä¼ å…¥æ•°æ®
- * @return Type xçš„ç»å¯¹å€¼
+ * @brief Çó¾ø¶ÔÖµ
+ *
+ * @tparam Type
+ * @param x ´«ÈëÊı¾İ
+ * @return Type xµÄ¾ø¶ÔÖµ
  */
 template <typename Type>
 Type Math_Abs(Type x)
 {
-    return((x > 0) ? x : -x); 
+    return((x > 0) ? x : -x);
 }
 
 /**
- * @brief PIDåˆå§‹åŒ–
- * 
- * @param __K_P På€¼
- * @param __K_I Iå€¼
- * @param __K_D Då€¼
- * @param __I_Out_Max ç§¯åˆ†é™å¹…
- * @param __Out_Max è¾“å‡ºé™å¹…
+ * @brief PID³õÊ¼»¯
+ *
+ * @param __K_P PÖµ
+ * @param __K_I IÖµ
+ * @param __K_D DÖµ
+ * @param __I_Out_Max »ı·ÖÏŞ·ù
+ * @param __Out_Max Êä³öÏŞ·ù
  */
 void Class_PID::Init(float __K_P, float __K_I, float __K_D, float __I_Out_Max, float __Out_Max)
 {
@@ -74,9 +63,9 @@ void Class_PID::Init(float __K_P, float __K_I, float __K_D, float __I_Out_Max, f
 }
 
 /**
- * @brief è®¾å®šPIDçš„P
- * 
- * @param __K_P PIDçš„P
+ * @brief Éè¶¨PIDµÄP
+ *
+ * @param __K_P PIDµÄP
  */
 void Class_PID::Set_K_P(float __K_P)
 {
@@ -84,9 +73,9 @@ void Class_PID::Set_K_P(float __K_P)
 }
 
 /**
- * @brief è®¾å®šPIDçš„I
- * 
- * @param __K_I PIDçš„I
+ * @brief Éè¶¨PIDµÄI
+ *
+ * @param __K_I PIDµÄI
  */
 void Class_PID::Set_K_I(float __K_I)
 {
@@ -94,9 +83,9 @@ void Class_PID::Set_K_I(float __K_I)
 }
 
 /**
- * @brief è®¾å®šPIDçš„D
- * 
- * @param __K_D PIDçš„D
+ * @brief Éè¶¨PIDµÄD
+ *
+ * @param __K_D PIDµÄD
  */
 void Class_PID::Set_K_D(float __K_D)
 {
@@ -104,9 +93,9 @@ void Class_PID::Set_K_D(float __K_D)
 }
 
 /**
- * @brief è®¾å®šç§¯åˆ†é™å¹…, 0ä¸ºä¸é™åˆ¶
- * 
- * @param __I_Out_Max ç§¯åˆ†é™å¹…, 0ä¸ºä¸é™åˆ¶
+ * @brief Éè¶¨»ı·ÖÏŞ·ù, 0Îª²»ÏŞÖÆ
+ *
+ * @param __I_Out_Max »ı·ÖÏŞ·ù, 0Îª²»ÏŞÖÆ
  */
 void Class_PID::Set_I_Out_Max(float __I_Out_Max)
 {
@@ -114,9 +103,9 @@ void Class_PID::Set_I_Out_Max(float __I_Out_Max)
 }
 
 /**
- * @brief è®¾å®šè¾“å‡ºé™å¹…, 0ä¸ºä¸é™åˆ¶
- * 
- * @param __Out_Max è¾“å‡ºé™å¹…, 0ä¸ºä¸é™åˆ¶
+ * @brief Éè¶¨Êä³öÏŞ·ù, 0Îª²»ÏŞÖÆ
+ *
+ * @param __Out_Max Êä³öÏŞ·ù, 0Îª²»ÏŞÖÆ
  */
 void Class_PID::Set_Out_Max(float __Out_Max)
 {
@@ -124,9 +113,9 @@ void Class_PID::Set_Out_Max(float __Out_Max)
 }
 
 /**
- * @brief è®¾å®šç›®æ ‡å€¼
- * 
- * @param __Target ç›®æ ‡å€¼
+ * @brief Éè¶¨Ä¿±êÖµ
+ *
+ * @param __Target Ä¿±êÖµ
  */
 void Class_PID::Set_Target(float __Target)
 {
@@ -134,9 +123,9 @@ void Class_PID::Set_Target(float __Target)
 }
 
 /**
- * @brief è®¾å®šå½“å‰å€¼
- * 
- * @param __Now å½“å‰å€¼
+ * @brief Éè¶¨µ±Ç°Öµ
+ *
+ * @param __Now µ±Ç°Öµ
  */
 void Class_PID::Set_Now(float __Now)
 {
@@ -144,9 +133,9 @@ void Class_PID::Set_Now(float __Now)
 }
 
 /**
- * @brief è®¾å®šæ­»åŒº, Erroråœ¨å…¶ç»å¯¹å€¼å†…ä¸è¾“å‡º
- * 
- * @param __Dead_Zone æ­»åŒº, Erroråœ¨å…¶ç»å¯¹å€¼å†…ä¸è¾“å‡º
+ * @brief Éè¶¨ËÀÇø, ErrorÔÚÆä¾ø¶ÔÖµÄÚ²»Êä³ö
+ *
+ * @param __Dead_Zone ËÀÇø, ErrorÔÚÆä¾ø¶ÔÖµÄÚ²»Êä³ö
  */
 void Class_PID::Set_Dead_Zone(float __Dead_Zone)
 {
@@ -154,9 +143,9 @@ void Class_PID::Set_Dead_Zone(float __Dead_Zone)
 }
 
 /**
- * @brief è®¾å®šå®šé€Ÿå†…æ®µé˜ˆå€¼, 0ä¸ºä¸é™åˆ¶
- * 
- * @param __Variable_Speed_I_A å®šé€Ÿå†…æ®µé˜ˆå€¼, 0ä¸ºä¸é™åˆ¶
+ * @brief Éè¶¨¶¨ËÙÄÚ¶ÎãĞÖµ, 0Îª²»ÏŞÖÆ
+ *
+ * @param __Variable_Speed_I_A ¶¨ËÙÄÚ¶ÎãĞÖµ, 0Îª²»ÏŞÖÆ
  */
 void Class_PID::Set_Variable_Speed_I_A(float __Variable_Speed_I_A)
 {
@@ -164,9 +153,9 @@ void Class_PID::Set_Variable_Speed_I_A(float __Variable_Speed_I_A)
 }
 
 /**
- * @brief è®¾å®šå˜é€ŸåŒºé—´, 0ä¸ºä¸é™åˆ¶
- * 
- * @param __Variable_Speed_I_B å˜é€ŸåŒºé—´, 0ä¸ºä¸é™åˆ¶
+ * @brief Éè¶¨±äËÙÇø¼ä, 0Îª²»ÏŞÖÆ
+ *
+ * @param __Variable_Speed_I_B ±äËÙÇø¼ä, 0Îª²»ÏŞÖÆ
  */
 void Class_PID::Set_Variable_Speed_I_B(float __Variable_Speed_I_B)
 {
@@ -174,9 +163,9 @@ void Class_PID::Set_Variable_Speed_I_B(float __Variable_Speed_I_B)
 }
 
 /**
- * @brief è®¾å®šç§¯åˆ†åˆ†ç¦»é˜ˆå€¼ï¼Œéœ€ä¸ºæ­£æ•°, 0ä¸ºä¸é™åˆ¶
- * 
- * @param __I_Separate_Threshold ç§¯åˆ†åˆ†ç¦»é˜ˆå€¼ï¼Œéœ€ä¸ºæ­£æ•°, 0ä¸ºä¸é™åˆ¶
+ * @brief Éè¶¨»ı·Ö·ÖÀëãĞÖµ£¬ĞèÎªÕıÊı, 0Îª²»ÏŞÖÆ
+ *
+ * @param __I_Separate_Threshold »ı·Ö·ÖÀëãĞÖµ£¬ĞèÎªÕıÊı, 0Îª²»ÏŞÖÆ
  */
 void Class_PID::Set_I_Separate_Threshold(float __I_Separate_Threshold)
 {
@@ -184,9 +173,9 @@ void Class_PID::Set_I_Separate_Threshold(float __I_Separate_Threshold)
 }
 
 /**
- * @brief è®¾å®šå¾®åˆ†å…ˆè¡Œ
- * 
- * @param __D_First å¾®åˆ†å…ˆè¡Œ
+ * @brief Éè¶¨Î¢·ÖÏÈĞĞ
+ *
+ * @param __D_First Î¢·ÖÏÈĞĞ
  */
 void Class_PID::Set_D_First(Enum_D_First __D_First)
 {
@@ -194,9 +183,9 @@ void Class_PID::Set_D_First(Enum_D_First __D_First)
 }
 
 /**
- * @brief è·å–è¾“å‡ºå€¼
- * 
- * @return float è¾“å‡ºå€¼
+ * @brief »ñÈ¡Êä³öÖµ
+ *
+ * @return float Êä³öÖµ
  */
 float Class_PID::Get_Out()
 {
@@ -204,9 +193,9 @@ float Class_PID::Get_Out()
 }
 
 /**
- * @brief PIDè°ƒæ•´å€¼
- * 
- * @return float è¾“å‡ºå€¼
+ * @brief PIDµ÷ÕûÖµ
+ *
+ * @return float Êä³öÖµ
  */
 void Class_PID::Adjust_TIM_PeriodElapsedCallback()
 {
@@ -214,51 +203,51 @@ void Class_PID::Adjust_TIM_PeriodElapsedCallback()
     Error = Target - Now;
     Abs_Error = Math_Abs(Error);
 
-    //åˆ¤æ–­æ­»åŒº
-    if(Abs_Error < Dead_Zone)
+    //ÅĞ¶ÏËÀÇø
+    if (Abs_Error < Dead_Zone)
     {
         Out = 0;
         return;
     }
 
-    //è®¡ç®—pé¡¹
+    //¼ÆËãpÏî
     P_Out = K_P * Error;
 
-    //è®¡ç®—ié¡¹
-    //çº¿æ€§å˜é€Ÿç§¯åˆ†
+    //¼ÆËãiÏî
+    //ÏßĞÔ±äËÙ»ı·Ö
     float Speed_Ratio;
-    if(Variable_Speed_I_A == 0 && Variable_Speed_I_A == 0)
+    if (Variable_Speed_I_A == 0 && Variable_Speed_I_A == 0)
     {
         Speed_Ratio = 1;
     }
     else
     {
-        if(Abs_Error < Variable_Speed_I_B)
+        if (Abs_Error < Variable_Speed_I_B)
         {
             Speed_Ratio = 1;
         }
-        else if(Variable_Speed_I_B <= Abs_Error < Variable_Speed_I_A + Variable_Speed_I_B)
+        else if (Variable_Speed_I_B <= Abs_Error < Variable_Speed_I_A + Variable_Speed_I_B)
         {
             Speed_Ratio = (Variable_Speed_I_A + Variable_Speed_I_B - Abs_Error) / Variable_Speed_I_A;
         }
-        if(Abs_Error >= Variable_Speed_I_B)
+        if (Abs_Error >= Variable_Speed_I_B)
         {
             Speed_Ratio = 0;
         }
     }
     Integral_Error += Speed_Ratio * D_T * Error;
-    if(I_Out_Max != 0)
+    if (I_Out_Max != 0)
     {
         Math_Constrain(&Integral_Error, -I_Out_Max / K_I, I_Out_Max / K_I);
     }
-    //ç§¯åˆ†åˆ†ç¦»
-    if(I_Separate_Threshold == 0)
+    //»ı·Ö·ÖÀë
+    if (I_Separate_Threshold == 0)
     {
         I_Out = K_I * Integral_Error;
     }
     else
     {
-        if(Abs_Error < I_Separate_Threshold)
+        if (Abs_Error < I_Separate_Threshold)
         {
             I_Out = K_I * Integral_Error;
         }
@@ -268,8 +257,8 @@ void Class_PID::Adjust_TIM_PeriodElapsedCallback()
         }
     }
 
-    //è®¡ç®—dé¡¹
-    if(D_First == D_First_YES)
+    //¼ÆËãdÏî
+    if (D_First == D_First_YES)
     {
         D_Out = K_D * (Now - Pre_Value);
     }
@@ -278,18 +267,16 @@ void Class_PID::Adjust_TIM_PeriodElapsedCallback()
         D_Out = K_D * (Error - Pre_Error);
     }
 
-    //å–„åå·¥ä½œ
+    //ÉÆºó¹¤×÷
     Pre_Error = Error;
     Pre_Value = Now;
     Out = P_Out + I_Out + D_Out;
-    if(Out_Max != 0)
+    if (Out_Max != 0)
     {
         Math_Constrain(&Out, -Out_Max, Out_Max);
     }
-    
+
 
 }
 
 /* Function prototypes -------------------------------------------------------*/
-
-/************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/

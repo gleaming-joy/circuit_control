@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Chassis.hpp"
+
+#include "chassis.hpp"
 
 /* USER CODE END Includes */
 
@@ -95,22 +96,20 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
-	
+
   //底盘初始化
   Chassis.Init(CHASSIS_MOTOR_PWM_DRIVER_TIM, CHASSIS_MOTOR_CALCULATE_TIM);
-  Chassis.Set_Control_Method(Control_Method_OPENLOOP); 
+  Chassis.Set_Control_Method(Control_Method_OPENLOOP);
 
   //使能计算时钟
   HAL_TIM_Base_Start_IT(&CHASSIS_MOTOR_CALCULATE_TIM);
-  
-  // //使能遥控器DMA-UART
-  // HAL_UART_Receive_DMA(&CHASSIS_DR16_CONTROL_UART, Chassis.DR16.Pack, DR16_PACK_LENGTH);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-SpeedTypeDef v_front=
+
+  SpeedTypeDef v_front=
   {
     0, 0.3, 0
   };
@@ -149,10 +148,12 @@ SpeedTypeDef v_front=
   HAL_Delay(1500);
 
   while (1)
-	{
+  {
+		
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
     Chassis.Set_Velocity(v_front);
     Chassis.Calculate_TIM_PeriodElapsedCallback();
     HAL_Delay(2000);

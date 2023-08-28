@@ -1,5 +1,5 @@
-gleaming_joy\steer.o: USER\Device\Steer\Steer.cpp
-gleaming_joy\steer.o: USER\Device\Steer\Steer.hpp
+gleaming_joy\steer.o: ..\USER\Steer\steer.cpp
+gleaming_joy\steer.o: ..\USER\Steer\Steer.hpp
 gleaming_joy\steer.o: ../Core/Inc/main.h
 gleaming_joy\steer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 gleaming_joy\steer.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -31,4 +31,3 @@ gleaming_joy\steer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gleaming_joy\steer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 gleaming_joy\steer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gleaming_joy\steer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-gleaming_joy\steer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
