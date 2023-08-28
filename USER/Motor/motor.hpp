@@ -8,25 +8,25 @@
 
 /* Exported macros -----------------------------------------------------------*/
 
-//Ô²ÖÜÂÊ
+//åœ†å‘¨ç‡
 const float PI = 3.14159f;
 
-//µç»ú¼õËÙºóÂú×ª×ªËÙ, rad/s
-const float MOTOR_FULL_OMEGA = (190.0f / 60.0f * 2.0f * PI);
+//ç”µæœºå‡é€Ÿåæ»¡è½¬è½¬é€Ÿ, rad/s
+const float MOTOR_FULL_OMEGA = (325.0f / 60.0f * 2.0f * PI);
 
-//µç»ú¼õËÙºó»ô¶û±àÂëÆ÷±àÂëÊı, /rad
-const float MOTOR_ENCODER_NUM_PER_RAD = (17.0f * 51.0f / 2.0f / PI);
+//ç”µæœºå‡é€Ÿåéœå°”ç¼–ç å™¨ç¼–ç æ•°, /rad
+const float MOTOR_ENCODER_NUM_PER_RAD = (13.0f * 27.0f / 2.0f / PI);
 
-//µç»úPWMÂúÕ¼¿Õ±È¶ÔÓ¦µÄÊıÖµ
-const int32_t MOTOR_CALCULATE_PRESCALER = 32767;
+//ç”µæœºPWMæ»¡å ç©ºæ¯”å¯¹åº”çš„æ•°å€¼
+const int32_t MOTOR_CALCULATE_PRESCALER = 999;
 
-//¼ÆËã¶¨Ê±Æ÷ÆµÂÊ, s
+//è®¡ç®—å®šæ—¶å™¨é¢‘ç‡, s
 const float MOTOR_CALCULATE_PERIOD = 0.05f;
 
 /* Exported types ------------------------------------------------------------*/
 
 /**
- * @brief µç»ú¿ØÖÆ·½Ê½
+ * @brief ç”µæœºæ§åˆ¶æ–¹å¼
  *
  */
 enum Enum_Control_Method
@@ -37,7 +37,7 @@ enum Enum_Control_Method
 };
 
 /**
- * @brief µç»ú¿ØÖÆ·½Ê½
+ * @brief ç”µæœºæ§åˆ¶æ–¹å¼
  *
  */
 enum Enum_Rotate_Direction
@@ -66,24 +66,24 @@ public:
 
 protected:
 
-    //µç»úÇı¶¯¶¨Ê±Æ÷±àºÅ
+    //ç”µæœºé©±åŠ¨å®šæ—¶å™¨ç¼–å·
     TIM_HandleTypeDef Driver_PWM_TIM;
-    //¶¨Ê±Æ÷Í¨µÀ
+    //å®šæ—¶å™¨é€šé“
     uint8_t Driver_PWM_TIM_Channel_x;
-    //µç»ú·½ÏòAÏà
+    //ç”µæœºæ–¹å‘Aç›¸
     uint16_t Output_A_GPIO_Pin;
     GPIO_TypeDef* Output_A_GPIOx;
-    //µç»ú·½ÏòBÏà
+    //ç”µæœºæ–¹å‘Bç›¸
     uint16_t Output_B_GPIO_Pin;
     GPIO_TypeDef* Output_B_GPIOx;
 
-    //µç»úÕıÏòĞı×ª·½Ïò
+    //ç”µæœºæ­£å‘æ—‹è½¬æ–¹å‘
     Enum_Rotate_Direction Rotate_Direction_Flag = CW;
-    //µç»ú¼õËÙºóÂú×ª×ªËÙ, rad/s
+    //ç”µæœºå‡é€Ÿåæ»¡è½¬è½¬é€Ÿ, rad/s
     float Motor_Full_Omega = MOTOR_FULL_OMEGA;
-    //µç»úPWMÂúÕ¼¿Õ±È¶ÔÓ¦µÄÊıÖµ
+    //ç”µæœºPWMæ»¡å ç©ºæ¯”å¯¹åº”çš„æ•°å€¼
     int32_t Motor_PWM_Period = MOTOR_CALCULATE_PRESCALER;
-    //µç»úÄ¿±êÊä³öÇ¿¶È, ¼´µç»úPWMÕ¼¿Õ±ÈµÄ·Ö×Ó
+    //ç”µæœºç›®æ ‡è¾“å‡ºå¼ºåº¦, å³ç”µæœºPWMå ç©ºæ¯”çš„åˆ†å­
     int32_t Out = 0;
 
 };
@@ -92,9 +92,9 @@ class Class_Motor_With_Hall_Encoder : public Class_Motor
 {
 public:
 
-    //µç»úËÙ¶È»·PID²ÎÊı
+    //ç”µæœºé€Ÿåº¦ç¯PIDå‚æ•°
     Class_PID Omega_PID;
-    //µç»ú½Ç¶È»·PID²ÎÊı
+    //ç”µæœºè§’åº¦ç¯PIDå‚æ•°
     Class_PID Angle_PID;
 
     void Init(TIM_HandleTypeDef __Driver_PWM_TIM, uint8_t __Driver_PWM_TIM_Channel_x, uint16_t __Output_A_GPIO_Pin, GPIO_TypeDef* __Output_A_GPIOx, uint16_t __Output_B_GPIO_Pin, GPIO_TypeDef* __Output_B_GPIOx, TIM_HandleTypeDef __Calculate_EXTI_TIM, uint16_t __Input_A_GPIO_Pin, GPIO_TypeDef* __Input_A_GPIOx, uint16_t __Input_B_GPIO_Pin, GPIO_TypeDef* __Input_B_GPIOx);
@@ -113,30 +113,30 @@ public:
 
 protected:
 
-    //¼ÆËã¶¨Ê±Æ÷±àºÅ
+    //è®¡ç®—å®šæ—¶å™¨ç¼–å·
     TIM_HandleTypeDef Calculate_TIM;
-    //»ô¶û±àÂëÆ÷·½ÏòA
+    //éœå°”ç¼–ç å™¨æ–¹å‘A
     uint16_t Input_A_GPIO_Pin;
     GPIO_TypeDef* Input_A_GPIOx;
-    //»ô¶û±àÂëÆ÷·½ÏòB
+    //éœå°”ç¼–ç å™¨æ–¹å‘B
     uint16_t Input_B_GPIO_Pin;
     GPIO_TypeDef* Input_B_GPIOx;
 
-    //µç»ú¿ØÖÆ·½Ê½
+    //ç”µæœºæ§åˆ¶æ–¹å¼
     Enum_Control_Method Control_Method = Control_Method_OMEGA;
-    //»ô¶û±àÂëÆ÷¼ÆÊı
+    //éœå°”ç¼–ç å™¨è®¡æ•°
     int32_t Hall_Encoder_Count = 0;
-    //»ô¶û±àÂëÆ÷Ç°Ò»¸ö¼ÆÊı
+    //éœå°”ç¼–ç å™¨å‰ä¸€ä¸ªè®¡æ•°
     int32_t Prev_Hall_Encoder_Count = 0;
-    //µç»ú¼õËÙºó»ô¶û±àÂëÆ÷±àÂëÊı, /rad
+    //ç”µæœºå‡é€Ÿåéœå°”ç¼–ç å™¨ç¼–ç æ•°, /rad
     float Motor_Encoder_Num_Per_Rad = MOTOR_ENCODER_NUM_PER_RAD;
-    //µ±Ç°µç»ú×ªËÙ, rad/s
+    //å½“å‰ç”µæœºè½¬é€Ÿ, rad/s
     float Omega_Now = 0;
-    //Ä¿±êµç»ú×ªËÙ, rad/s
+    //ç›®æ ‡ç”µæœºè½¬é€Ÿ, rad/s
     float Omega_Target = 0;
-    //µ±Ç°µç»ú½Ç¶È, rad
+    //å½“å‰ç”µæœºè§’åº¦, rad
     float Angle_Now = 0;
-    //Ä¿±êµç»ú½Ç¶È, rad
+    //ç›®æ ‡ç”µæœºè§’åº¦, rad
     float Angle_Target = 0;
 
 };

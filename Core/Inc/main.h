@@ -50,10 +50,10 @@ extern TIM_HandleTypeDef htim4;
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
-//µ×ÅÌÂóÂÖµç»úµÄ¼ÆÊ±Æ÷
+//åº•ç›˜éº¦è½®ç”µæœºçš„è®¡æ—¶å™¨
 #define CHASSIS_MOTOR_PWM_DRIVER_TIM htim4
 #define CHASSIS_MOTOR_CALCULATE_TIM htim2
-//µ×ÅÌËÙ¶È¼ÆËãµÄ¼ÆÊ±Æ÷
+//åº•ç›˜é€Ÿåº¦è®¡ç®—çš„è®¡æ—¶å™¨
 
 /* USER CODE END EM */
 
@@ -68,7 +68,7 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 
-// ÂóÂÖµç»úGPIO
+// éº¦è½®ç”µæœºGPIO
 #define Pin_Pushpull_MotorDirectionA1_Pin GPIO_PIN_5
 #define Pin_Pushpull_MotorDirectionA1_GPIO_Port GPIOF
 #define Pin_Pushpull_MotorDirectionA2_Pin GPIO_PIN_11
@@ -85,7 +85,7 @@ void Error_Handler(void);
 #define Pin_Pushpull_MotorDirectionB3_GPIO_Port GPIOF
 #define Pin_Pushpull_MotorDirectionB4_Pin GPIO_PIN_14
 #define Pin_Pushpull_MotorDirectionB4_GPIO_Port GPIOE
-// »ô¶û±àÂëÆ÷ÖĞ¶Ï
+// éœå°”ç¼–ç å™¨ä¸­æ–­
 #define Pin_Exti_HallEncoderA1_Pin GPIO_PIN_7
 #define Pin_Exti_HallEncoderA1_GPIO_Port GPIOF
 #define Pin_Exti_HallEncoderA1_EXTI_IRQn EXTI7_IRQn
@@ -98,7 +98,7 @@ void Error_Handler(void);
 #define Pin_Exti_HallEncoderA4_Pin GPIO_PIN_15
 #define Pin_Exti_HallEncoderA4_GPIO_Port GPIOE
 #define Pin_Exti_HallEncoderA4_EXTI_IRQn EXTI15_IRQn
-// »ô¶û±àÂëÆ÷GPIO
+// éœå°”ç¼–ç å™¨GPIO
 #define Pin_PullDown_HallEncoderB1_Pin GPIO_PIN_11
 #define Pin_PullDown_HallEncoderB1_GPIO_Port GPIOF
 #define Pin_PullDown_HallEncoderB2_Pin GPIO_PIN_8

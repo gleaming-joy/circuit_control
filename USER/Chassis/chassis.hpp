@@ -9,13 +9,13 @@
 /* Exported macros -----------------------------------------------------------*/
 
 //轮半径, m
-const float WHEEL_RADIUS = 0.050f;
+const float WHEEL_RADIUS = 0.0635f;
 
 //轮组满转线速度, m/s
 const float WHEEL_FULL_V = (MOTOR_FULL_OMEGA * WHEEL_RADIUS);
 
 //omega到m/s映射系数, (横轮距+纵轮距)/2, m/rad
-const float OMEGA_TO_MS = ((0.482f + 0.500f) / 2);
+const float OMEGA_TO_MS = ((0.360f + 0.412f) / 2);
 
 //绝对速度限制, 任何情况不能超过
 //横移速度上限, m/s

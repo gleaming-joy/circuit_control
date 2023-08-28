@@ -11,12 +11,12 @@
 /* Private function declarations ---------------------------------------------*/
 
 /**
- * @brief ÏŞ·ùº¯Êı
+ * @brief é™å¹…å‡½æ•°
  *
  * @tparam Type
- * @param x ´«ÈëÊı¾İ
- * @param Min ×îĞ¡Öµ
- * @param Max ×î´óÖµ
+ * @param x ä¼ å…¥æ•°æ®
+ * @param Min æœ€å°å€¼
+ * @param Max æœ€å¤§å€¼
  */
 template <typename Type>
 void Math_Constrain(Type* x, Type Min, Type Max)
@@ -32,11 +32,11 @@ void Math_Constrain(Type* x, Type Min, Type Max)
 }
 
 /**
- * @brief Çó¾ø¶ÔÖµ
+ * @brief æ±‚ç»å¯¹å€¼
  *
  * @tparam Type
- * @param x ´«ÈëÊı¾İ
- * @return Type xµÄ¾ø¶ÔÖµ
+ * @param x ä¼ å…¥æ•°æ®
+ * @return Type xçš„ç»å¯¹å€¼
  */
 template <typename Type>
 Type Math_Abs(Type x)
@@ -45,17 +45,17 @@ Type Math_Abs(Type x)
 }
 
 /**
- * @brief ³õÊ¼»¯µ×ÅÌ
+ * @brief åˆå§‹åŒ–åº•ç›˜
  *
- * @param __Driver_PWM_TIM µç»úÇı¶¯¶¨Ê±Æ÷±àºÅ
- * @param __Calculate_EXTI_TIM ËÙ¶È¼ÆËã¶¨Ê±Æ÷±àºÅ
+ * @param __Driver_PWM_TIM ç”µæœºé©±åŠ¨å®šæ—¶å™¨ç¼–å·
+ * @param __Calculate_EXTI_TIM é€Ÿåº¦è®¡ç®—å®šæ—¶å™¨ç¼–å·
  */
 void Class_Chassis::Init(TIM_HandleTypeDef __Driver_PWM_TIM, TIM_HandleTypeDef __Calculate_EXTI_TIM)
 {
     Driver_PWM_TIM = __Driver_PWM_TIM;
     Calculate_TIM = __Calculate_EXTI_TIM;
 
-    //µç»ú³õÊ¼»¯
+    //ç”µæœºåˆå§‹åŒ–
 
     Motor[0].Init(__Driver_PWM_TIM, TIM_CHANNEL_1, Pin_Pushpull_MotorDirectionA1_Pin, Pin_Pushpull_MotorDirectionA1_GPIO_Port, Pin_Pushpull_MotorDirectionB1_Pin, Pin_Pushpull_MotorDirectionB1_GPIO_Port, __Calculate_EXTI_TIM, Pin_Exti_HallEncoderA1_Pin, Pin_Exti_HallEncoderA1_GPIO_Port, Pin_PullDown_HallEncoderB1_Pin, Pin_PullDown_HallEncoderB1_GPIO_Port);
     Motor[0].Set_Rotate_Direction_Flag(CCW);
@@ -69,7 +69,7 @@ void Class_Chassis::Init(TIM_HandleTypeDef __Driver_PWM_TIM, TIM_HandleTypeDef _
     Motor[3].Init(__Driver_PWM_TIM, TIM_CHANNEL_4, Pin_Pushpull_MotorDirectionA4_Pin, Pin_Pushpull_MotorDirectionA4_GPIO_Port, Pin_Pushpull_MotorDirectionB4_Pin, Pin_Pushpull_MotorDirectionB4_GPIO_Port, __Calculate_EXTI_TIM, Pin_Exti_HallEncoderA4_Pin, Pin_Exti_HallEncoderA4_GPIO_Port, Pin_PullDown_HallEncoderB4_Pin, Pin_PullDown_HallEncoderB4_GPIO_Port);
     Motor[3].Set_Rotate_Direction_Flag(CCW);
 
-    //µç»úPID³õÊ¼»¯
+    //ç”µæœºPIDåˆå§‹åŒ–
     for (int i = 0; i < 4; i++)
     {
         Motor[i].Omega_PID.Init(2000, 3000, 25, ULONG_MAX, ULONG_MAX);
@@ -77,9 +77,9 @@ void Class_Chassis::Init(TIM_HandleTypeDef __Driver_PWM_TIM, TIM_HandleTypeDef _
 }
 
 /**
- * @brief Éè¶¨µ×ÅÌËÙ¶È
+ * @brief è®¾å®šåº•ç›˜é€Ÿåº¦
  *
- * @param __Velocity µ×ÅÌËÙ¶È
+ * @param __Velocity åº•ç›˜é€Ÿåº¦
  */
 void Class_Chassis::Set_Velocity(SpeedTypeDef __Velocity)
 {
@@ -89,9 +89,9 @@ void Class_Chassis::Set_Velocity(SpeedTypeDef __Velocity)
 
 
 /**
- * @brief Éè¶¨µ×ÅÌ¿ØÖÆ·½Ê½
+ * @brief è®¾å®šåº•ç›˜æ§åˆ¶æ–¹å¼
  *
- * @param __Control_Method µ×ÅÌ¿ØÖÆ·½Ê½
+ * @param __Control_Method åº•ç›˜æ§åˆ¶æ–¹å¼
  */
 void Class_Chassis::Set_Control_Method(Enum_Control_Method __Control_Method)
 {
@@ -104,12 +104,12 @@ void Class_Chassis::Set_Control_Method(Enum_Control_Method __Control_Method)
 }
 
 /**
- * @brief µ×ÅÌµç»ú»ô¶û±àÂëÆ÷´¥·¢ÖĞ¶Ï´¦Àíº¯Êı
+ * @brief åº•ç›˜ç”µæœºéœå°”ç¼–ç å™¨è§¦å‘ä¸­æ–­å¤„ç†å‡½æ•°
  *
  */
 void Class_Chassis::Hall_Encoder_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    //ÅĞ¶ÏÖĞ¶ÏÔ´, ²¢Ö¸Ïòµç»úµÄÖĞ¶Ï´¦Àíº¯Êı
+    //åˆ¤æ–­ä¸­æ–­æº, å¹¶æŒ‡å‘ç”µæœºçš„ä¸­æ–­å¤„ç†å‡½æ•°
     if (GPIO_Pin == Pin_Exti_HallEncoderA1_Pin)
     {
         Motor[0].Hall_Encoder_GPIO_EXTI_Callback();
@@ -130,12 +130,12 @@ void Class_Chassis::Hall_Encoder_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 
 /**
- * @brief ¶¨Ê±Æ÷ÖĞ¶Ï´¦Àíº¯Êı
+ * @brief å®šæ—¶å™¨ä¸­æ–­å¤„ç†å‡½æ•°
  *
  */
 void Class_Chassis::Calculate_TIM_PeriodElapsedCallback()
 {
-    //ËÙ¶È½âËã
+    //é€Ÿåº¦è§£ç®—
     Math_Constrain(&Velocity.X, -X_MAX, X_MAX);
     Math_Constrain(&Velocity.Y, -Y_MAX, Y_MAX);
     Math_Constrain(&Velocity.Omega, -OMEGA_MAX, OMEGA_MAX);
@@ -144,7 +144,7 @@ void Class_Chassis::Calculate_TIM_PeriodElapsedCallback()
     Motor[2].Set_Omega_Target((OMEGA_TO_MS * Velocity.Omega + Velocity.X - Velocity.Y) / WHEEL_RADIUS * ((Motor[2].Get_Rotate_Direction_Flag() == CW) ? 1 : (-1)));
     Motor[3].Set_Omega_Target((OMEGA_TO_MS * Velocity.Omega - Velocity.X - Velocity.Y) / WHEEL_RADIUS * ((Motor[3].Get_Rotate_Direction_Flag() == CW) ? 1 : (-1)));
 
-    //µç»úÊä³öÖµÉè¶¨²¢Êä³ö
+    //ç”µæœºè¾“å‡ºå€¼è®¾å®šå¹¶è¾“å‡º
     for (int i = 0; i < 4; i++)
     {
         Motor[i].Calculate_TIM_PeriodElapsedCallback();
