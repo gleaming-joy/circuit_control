@@ -23,6 +23,10 @@ gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -30,7 +34,12 @@ gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+gleaming_joy\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+gleaming_joy\main.o: ../Core/Inc/adc.h
+gleaming_joy\main.o: ../Core/Inc/can.h
+gleaming_joy\main.o: ../Core/Inc/dma.h
 gleaming_joy\main.o: ../Core/Inc/tim.h
+gleaming_joy\main.o: ../Core/Inc/usart.h
 gleaming_joy\main.o: ../Core/Inc/gpio.h
 gleaming_joy\main.o: ..\USER\Chassis\chassis.hpp
 gleaming_joy\main.o: ..\USER\Motor\motor.hpp

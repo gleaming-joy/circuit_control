@@ -18,7 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "can.h"
+#include "dma.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -48,6 +52,8 @@
 /* USER CODE BEGIN PV */
 
 Class_Chassis Chassis;
+uint16_t ADC_Value[4];
+uint8_t ADC_Bool[4];
 
 /* USER CODE END PV */
 
@@ -90,11 +96,15 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
   MX_TIM1_Init();
   MX_TIM9_Init();
+  MX_USART1_UART_Init();
+  MX_CAN1_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
   //底盘初始化
@@ -103,6 +113,9 @@ int main(void)
 
   //使能计算时钟
   HAL_TIM_Base_Start_IT(&CHASSIS_MOTOR_CALCULATE_TIM);
+
+  //使能ADC
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)ADC_Value, 4);
 
   /* USER CODE END 2 */
 
@@ -154,47 +167,101 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-    Chassis.Set_Velocity(v_front);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(2000);
-    Chassis.Set_Velocity(v_stop);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(1000);
+    // 巡线模块调参
+    if (ADC_Value[0] < 400)
+    {
+      ADC_Bool[0] = 0;
+    }
+    else if (ADC_Value[0] > 600)
+    {
+      ADC_Bool[0] = 1;
+    }
 
-    Chassis.Set_Velocity(v_right);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(2000);
-    Chassis.Set_Velocity(v_stop);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(1000);
+    if (ADC_Value[1] < 400)
+    {
+      ADC_Bool[1] = 0;
+    }
+    else if (ADC_Value[1] > 600)
+    {
+      ADC_Bool[1] = 1;
+    }
 
-    Chassis.Set_Velocity(v_rotate);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(2000);
-    Chassis.Set_Velocity(v_stop);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(1000);
+    if (ADC_Value[2] < 400)
+    {
+      ADC_Bool[2] = 0;
+    }
+    else if (ADC_Value[2] > 600)
+    {
+      ADC_Bool[2] = 1;
+    }
 
-    Chassis.Set_Velocity(v_crotate);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(2000);
-    Chassis.Set_Velocity(v_stop);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(1000);
+    if (ADC_Value[3] < 400)
+    {
+      ADC_Bool[3] = 0;
+    }
+    else if (ADC_Value[3] > 600)
+    {
+      ADC_Bool[3] = 1;
+    }
 
-    Chassis.Set_Velocity(v_left);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(2000);
-    Chassis.Set_Velocity(v_stop);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(1000);
-
-    Chassis.Set_Velocity(v_back);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(2000);
-    Chassis.Set_Velocity(v_stop);
-    Chassis.Calculate_TIM_PeriodElapsedCallback();
-    HAL_Delay(1000);
+    // 底盘运动
+    // 向前运动
+    if (ADC_Bool[0] == 0 && ADC_Bool[1] == 1 && ADC_Bool[2] == 1 && ADC_Bool[3] == 0)
+    {
+      Chassis.Set_Velocity(v_front);
+      Chassis.Calculate_TIM_PeriodElapsedCallback();
+    }
+    // 右转
+    else if (ADC_Bool[0] == 1 && ADC_Bool[1] == 1 && ADC_Bool[2] == 1 && ADC_Bool[3] == 0)
+    {
+      Chassis.Set_Velocity(v_rotate);
+      Chassis.Calculate_TIM_PeriodElapsedCallback();
+      HAL_Delay(50000);
+      Chassis.Set_Velocity(v_left);
+      Chassis.Calculate_TIM_PeriodElapsedCallback();
+    }
+    // 左转
+    else if (ADC_Bool[0] == 0 && ADC_Bool[1] == 1 && ADC_Bool[2] == 1 && ADC_Bool[3] == 1)
+    {
+      Chassis.Set_Velocity(v_crotate);
+      Chassis.Calculate_TIM_PeriodElapsedCallback();
+      HAL_Delay(50000);
+      Chassis.Set_Velocity(v_right);
+      Chassis.Calculate_TIM_PeriodElapsedCallback();
+    }
+    // // 车头向右偏
+    // else if (ADC_Bool[0] == 0 && ADC_Bool[1] == 0 && ADC_Bool[2] == 1 && ADC_Bool[3] == 0)
+    // {
+    //   while (1)
+    //   {
+    //     if (ADC_Bool[0] == 0 && ADC_Bool[1] == 1 && ADC_Bool[2] == 1 && ADC_Bool[3] == 0)
+    //     {
+    //       break;
+    //     }
+    //     Chassis.Set_Velocity(v_crotate);
+    //     Chassis.Calculate_TIM_PeriodElapsedCallback();
+    //   }
+    // }
+    // // 车头向左偏
+    // else if (ADC_Bool[0] == 0 && ADC_Bool[1] == 1 && ADC_Bool[2] == 0 && ADC_Bool[3] == 0)
+    // {
+    //   while (1)
+    //   {
+    //     if (ADC_Bool[0] == 0 && ADC_Bool[1] == 1 && ADC_Bool[2] == 1 && ADC_Bool[3] == 0)
+    //     {
+    //       break;
+    //     }
+    //     Chassis.Set_Velocity(v_rotate);
+    //     Chassis.Calculate_TIM_PeriodElapsedCallback();
+    //   }
+    // }
+    // 停下
+    else if (ADC_Bool[0] == 0 && ADC_Bool[1] == 0 && ADC_Bool[2] == 0 && ADC_Bool[3] == 0)
+    {
+      Chassis.Set_Velocity(v_stop);
+      Chassis.Calculate_TIM_PeriodElapsedCallback();
+    }
+    
   }
   /* USER CODE END 3 */
 }

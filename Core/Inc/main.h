@@ -85,7 +85,7 @@ void Error_Handler(void);
 #define Pin_Pushpull_MotorDirectionB3_GPIO_Port GPIOF
 #define Pin_Pushpull_MotorDirectionB4_Pin GPIO_PIN_14
 #define Pin_Pushpull_MotorDirectionB4_GPIO_Port GPIOE
-// 霍尔编码器中断
+// 霍尔编码器中�?
 #define Pin_Exti_HallEncoderA1_Pin GPIO_PIN_7
 #define Pin_Exti_HallEncoderA1_GPIO_Port GPIOF
 #define Pin_Exti_HallEncoderA1_EXTI_IRQn EXTI7_IRQn

@@ -60,3 +60,14 @@ tim1: CH1 PE9
 
 ## 同步带滑台
 tim9: CH1 PE5  
+
+
+## 通信  
+UASRT1_TX: PA9  
+USART1_RX: PA10
+
+## 巡线
+ADC1_IN6: PA6  
+ADC1_IN7: PA7  
+ADC1_IN10: PC0  
+ADC1_IN11: PC1
